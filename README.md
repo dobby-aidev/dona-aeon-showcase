@@ -6,15 +6,19 @@
 
 <br/>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![Showcase](https://img.shields.io/badge/Repository-Showcase_&_Research-6366F1?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2+-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Framework](https://img.shields.io/badge/Architecture-Active_Inference_&_SNN-6366F1?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
+[![Framework](https://img.shields.io/badge/Architecture-Active_Inference_&_SNN-8B5CF6?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
 [![Status](https://img.shields.io/badge/Status-Experimental_Neuroscience-10B981?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
 
 <br/>
 
-> **"A Artificial General Intelligence should not be a stochastic parrot predicting the next token; it must interact with an environment, minimize variational free energy, consolidate memory through REM sleep, and grow organically from infancy."**
+> **"An Artificial General Intelligence should not be a stochastic parrot predicting the next token; it must interact with an environment, minimize variational free energy, consolidate memory through REM sleep, and grow organically without token limits or context window bounds."**
+
+<br/>
+
+![DONA ÆON Architecture Blueprint](dona_aeon_architecture_v2.png)
 
 </div>
 
@@ -41,19 +45,21 @@ flowchart TD
     end
 
     subgraph Cortex ["🧠 ÆON Brain Core (dona_agent.py)"]
-        LIF["Leaky Integrate-and-Fire (LIF) Spiking Layer"]
-        FEP["Free Energy Minimization Engine"]
+        LIF["Leaky Integrate-and-Fire (LIF) Spiking Layer (512 Neurons)"]
+        FEP["Variational Free Energy Minimization Engine"]
         STDP["Spike-Timing-Dependent Plasticity (STDP)"]
+        Limbic["Biological Limbic System (Dopamine & Curiosity Drives)"]
     end
 
     subgraph Memory ["💾 Physical Memory System"]
-        PT[".pt Synaptic Weights Checkpoint (dona_brain_memory.pt)"]
+        PT[".pt Synaptic Weights Checkpoint (W_recurrent)"]
         REM["REM Sleep Memory Consolidation Loop"]
     end
 
     Input --> LIF
     LIF --> FEP
-    FEP --> STDP
+    FEP --> Limbic
+    Limbic --> STDP
     STDP --> PT
     PT --> Feedback
     Feedback --> REM
@@ -76,11 +82,11 @@ Where:
 - $q(s)$ is internal belief about environmental states
 - $p(o \mid s)$ is the generative model of observations given states
 
-### 4. 730-Day Growth & Nocturnal REM Consolidation
+### 4. Continuous Lifespan & Nocturnal REM Consolidation
 ÆON experiences real-time physiological aging:
 - **Infancy (Days 0–90):** Basic sensory grounding, babbling, and high synaptic plasticity.
 - **Toddlerhood (Days 91–365):** Word association, emotional grounding, and parental bonding.
-- **Childhood (Days 366–730):** Sentence syntax formation, active questioning, and complex problem-solving.
+- **Childhood & Beyond (Days 366+):** Sentence syntax formation, active questioning, and open-ended adult cognition.
 - **Nightly REM Sleep:** At the end of each simulated day, unused synaptic noise is pruned while high-priority sensory traces are consolidated into long-term weight memory.
 
 ---
@@ -89,9 +95,10 @@ Where:
 
 ```text
 DONA_AEON/
-├── dona_agent.py             # Core Neuroscientific SNN Engine & Active Inference Cortex
+├── dona_agent.py             # Core Neuroscientific SNN Engine (DonaBiologicalAgentV4)
+├── dona_aeon_architecture_v2.png # Publication-grade Scientific Diagram
 ├── dona_brain_memory.pt      # Physical Synaptic Weight Matrices & Physiological Life State (.pt)
-├── simulation_loop.py        # 730-Day Growth Lifecycle, Parent/Teacher Interaction Engine
+├── simulation_loop.py        # Open-Ended Growth Lifecycle, Parent/Teacher Interaction Engine
 └── live_chat.py              # Interactive Real-Time CLI Consciousness Panel
 ```
 
@@ -99,9 +106,9 @@ DONA_AEON/
 
 | File | Purpose | Key Responsibilities |
 |:---|:---|:---|
-| **`dona_agent.py`** | Brain Engine | Implements spiking neural dynamics, LIF activation, prediction error computation, and STDP weight updates. |
-| **`dona_brain_memory.pt`** | Neural Checkpoint | Stores synaptic connectivity matrix ($W$), age in days, physiological stats (height/weight), and experience counts. |
-| **`simulation_loop.py`** | Growth Environment | Simulates a 2-year lifespan (730 days) with parent/teacher dialogues, feeding sensory inputs to ÆON. |
+| **`dona_agent.py`** | Brain Engine (`DonaBiologicalAgentV4`) | Implements 512-neuron LIF spiking neocortex, auditory cortex, limbic dopamine drive, prediction error computation, and STDP weight updates. |
+| **`dona_brain_memory.pt`** | Synaptic Checkpoint | Stores recurrent synaptic connectivity matrix ($W_{\text{recurrent}}$), age in days, physiological stats (height/weight), and curiosity drives. |
+| **`simulation_loop.py`** | Growth Environment | Simulates open-ended lifespan evolution with parent/teacher dialogues, feeding sensory inputs to ÆON. |
 | **`live_chat.py`** | Interface | Allows direct real-time interaction with ÆON, displaying current age, free energy metrics, and synaptic responses. |
 
 ---
@@ -126,7 +133,7 @@ drive.mount('/content/drive')
 
 Ensure the repository root contains `dona_agent.py`.
 
-### 3. Running the 730-Day Growth Lifecycle (`simulation_loop.py`)
+### 3. Running the Growth Lifecycle (`simulation_loop.py`)
 
 To initiate ÆON's life cycle from Day 0 (infant) through interactive family dialogues:
 
@@ -150,22 +157,13 @@ python live_chat.py
 
 ## 🔬 Research Philosophy
 
-> *"True Artificial General Intelligence cannot be achieved merely by scaling up auto-regressive next-token prediction over text corpora. A cognitive agent must be embodied, interact with a dynamic environment, learn via synaptic plasticity, sleep to prevent catastrophic forgetting, and evolve through variational error minimization."*
+> *"True Artificial General Intelligence cannot be achieved merely by scaling up auto-regressive next-token prediction over text corpora. A cognitive agent must be embodied, interact with a dynamic environment, learn via synaptic plasticity, sleep to prevent catastrophic forgetting, and evolve through variational error minimization without token bounds."*
 
 ---
 
-## 🗺️ Roadmap & Future Horizons
+## 📜 Copyright & Showcase Notice
 
-- [x] **Phase 1 — Infancy & Spiking Foundations:** LIF spiking neural engine, Free Energy minimization, 730-day lifecycle simulation.
-- [x] **Phase 2 — Synaptic Persistence:** `.pt` weight memory saving, nightly REM sleep consolidation loop.
-- [ ] **Phase 3 — Multi-Sensory Embodiment:** Direct visual (spiking camera feed) and spatial auditory sensory inputs.
-- [ ] **Phase 4 — Hippocampal Grid Cells:** Spatial navigation and internal mental map generation via entorhinal grid cell networks.
-
----
-
-## 📜 License
-
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
+Proprietary Research & Showcase Project by **dobby-aidev**. All rights reserved.
 
 ---
 
