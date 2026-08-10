@@ -24,11 +24,10 @@
 
 **DONA ÆON** is a biological digital organism simulation built from first principles. Unlike conventional Large Language Models (LLMs) or hardcoded chatbots:
 
-- **Starts at Day 0 (Infant State):** Begins as a blank-slate neural architecture with zero prior linguistic bias.
-- **Predictive Spiking Neurons:** Thinks through Leaky Integrate-and-Fire (LIF) spiking neural dynamics rather than static matrix multiplications.
-- **Karl Friston's Free Energy Principle (FEP):** Driven continuously to minimize surprise (Variational Free Energy) between internal generative models and environmental sensory inputs.
-- **Physical Synaptic Memory:** Stores memories directly inside physical synaptic connection weights ($W_{ij}$ saved in `.pt` state checkpoints), eliminating external context window constraints.
-- **730-Day Developmental Lifecycle:** Organically grows over a 2-year simulation cycle—tracking physical age, weight, height, and consolidating short-term experiences into long-term synaptic structures during nightly **REM sleep cycles**.
+- **Starts at Day 0 (Blank Slate) & Continuous Lifespan:** Begins as a blank-slate infant neural architecture and evolves perpetually (beyond 730 days into an open-ended lifespan) through environmental interaction.
+- **Zero Token Limits & No Context Windows:** Completely eliminates tokenizers, token budgets, and context window limits. All memories and skills reside physically in continuous synaptic weight matrices ($W_{ij}$ saved in `.pt` state checkpoints).
+- **No Ezber / No Stochastic Next-Token Prediction:** Does not memorize text corpora or predict next-word probabilities. Uses **Karl Friston's Free Energy Principle (FEP)** to continuously minimize variational prediction errors through active inference.
+- **Predictive Spiking Neurons & REM Consolidation:** Thinks via Leaky Integrate-and-Fire (LIF) spiking neural cascades, tracking physiological growth (age, weight, height) and consolidating short-term sensory traces into long-term synaptic structures during nightly **REM sleep cycles**.
 
 ---
 
