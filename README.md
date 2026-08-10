@@ -28,51 +28,111 @@
 
 **DONA ÆON** is a biological digital organism simulation built from first principles. Unlike conventional Large Language Models (LLMs) or hardcoded chatbots:
 
-- **Starts at Day 0 (Blank Slate) & Continuous Lifespan:** Begins as a blank-slate infant neural architecture and evolves perpetually (beyond 730 days into an open-ended lifespan) through environmental interaction.
-- **Zero Token Limits & No Context Windows:** Completely eliminates tokenizers, token budgets, and context window limits. All memories and skills reside physically in continuous synaptic weight matrices ($W_{ij}$ saved in `.pt` state checkpoints).
+- **Starts at Day 0 (Blank Slate) & Open-Ended Continuous Lifespan:** Begins as a blank-slate infant neural architecture and evolves perpetually through open-ended environmental interaction.
+- **Zero Token Limits & No Context Windows:** Completely eliminates tokenizers, token budgets, and context window limits. All memories and skills reside physically in continuous synaptic weight matrices ($W_{\text{recurrent}}$ saved in `.pt` state checkpoints).
 - **No Ezber / No Stochastic Next-Token Prediction:** Does not memorize text corpora or predict next-word probabilities. Uses **Karl Friston's Free Energy Principle (FEP)** to continuously minimize variational prediction errors through active inference.
-- **Predictive Spiking Neurons & REM Consolidation:** Thinks via Leaky Integrate-and-Fire (LIF) spiking neural cascades, tracking physiological growth (age, weight, height) and consolidating short-term sensory traces into long-term synaptic structures during nightly **REM sleep cycles**.
+- **Predictive Spiking Neurons & REM Consolidation:** Thinks via 512 Leaky Integrate-and-Fire (LIF) spiking neural cascades, tracking physiological growth (age, weight, height) and consolidating short-term sensory traces into long-term synaptic structures during nightly **REM sleep cycles**.
+
+---
+
+## 🔬 System Architecture & Cortical Modules
+
+```mermaid
+flowchart TD
+    subgraph Environment ["🌍 External World & Sensory Inputs"]
+        Auditory["Auditory & Speech Input (dona_auditory.py)"]
+        Vision["Retinal Spiking Stream (dona_vision.py)"]
+        Tactile["Tactile Receptors (dona_tactile.py)"]
+    end
+
+    subgraph CoreCortex ["🧠 Core Cortical Engine (DONA_AEON/core/)"]
+        Agent["Main Agent Orchestrator (dona_agent.py)"]
+        Neocortex["512 LIF Spiking Neocortex (dona_predictive_brain.py)"]
+        FEP["Variational Free Energy Minimization (F = D_KL - E[log P])"]
+        Limbic["Limbic System & Dopamine Drive (dona_limbic.py)"]
+        Lobes["Cortical Lobe Manager (dona_lobes.py)"]
+        Consolidator["REM Sleep Consolidator (dona_consolidator.py)"]
+    end
+
+    subgraph SensoryModules ["🧩 Bio-Modules (DONA_AEON/modules/)"]
+        Physiology["Biological Metabolism & Physical Body (dona_physiology.py)"]
+        Sleep["Sleep Stage State Machine (dona_sleep.py)"]
+        Vocal["Laryngeal Vocal Motor (dona_vocal_motor.py)"]
+        Neuro["GABA/Glutamate Balance (dona_neurotransmitters.py)"]
+        Synth["Acoustic Vocal Synthesis (dona_audio_synth.py)"]
+    end
+
+    subgraph MemoryStorage ["💾 Physical Weight Storage (DONA_AEON/memory/)"]
+        Synapses["synapses_core.pt (Synaptic Weight Matrices W_recurrent)"]
+        PhysState["physiology_state.pt (Age, Weight, Height Metabolism)"]
+    end
+
+    Auditory --> Neocortex
+    Vision --> Neocortex
+    Tactile --> Neocortex
+    Neocortex --> FEP
+    FEP --> Limbic
+    Limbic --> Neuro
+    Neuro --> Agent
+    Agent --> Lobes
+    Lobes --> Synapses
+    Lobes --> PhysState
+    PhysState --> Physiology
+    Sleep --> Consolidator
+    Consolidator --> Synapses
+    Agent --> Vocal
+    Vocal --> Synth
+```
+
+---
+
+## 📂 Modular Repository Directory Structure
+
+```text
+DONA_AEON/
+├── core/                        # Core Neuroscientific Engine
+│   ├── dona_agent.py            # Main Agent Orchestrator V4 (DonaBiologicalAgentV4)
+│   ├── dona_auditory.py         # Spectro-Temporal Biological Auditory Processing
+│   ├── dona_brain_network.py    # Recurrent Synaptic Network Topology & Connectivity
+│   ├── dona_consolidator.py     # Nocturnal REM Memory Pruning & Synaptic Consolidation
+│   ├── dona_limbic.py           # Biological Limbic System (Dopamine & Curiosity Drives)
+│   ├── dona_lobes.py            # Cortical Lobe Persistence Manager & Serialization
+│   └── dona_predictive_brain.py # True Spiking Neocortex (512 LIF Neurons & FEP Engine)
+│
+├── modules/                     # Biological & Sensory Functional Subsystems
+│   ├── dona_association.py      # Cross-Modal Associative Cortex Integration
+│   ├── dona_audio_synth.py       # Vocal Tract Acoustic Speech Synthesis
+│   ├── dona_auditory.py         # Primary Auditory Receptive Fields
+│   ├── dona_dopamine.py         # Neuromodulatory Reward & Curiosity Dynamics
+│   ├── dona_neurotransmitters.py# GABA / Glutamate Excitation-Inhibition Balance
+│   ├── dona_physics_body.py     # Proprioceptive Kinematics & Body Somatosensory
+│   ├── dona_physiology.py       # Dynamic Biological Metabolism, Height & Weight Growth
+│   ├── dona_sleep.py            # Delta Wave Slow-Wave & REM Sleep Stage State Machine
+│   ├── dona_tactile.py          # Somatosensory Tactile Receptor Arrays
+│   ├── dona_vision.py           # Retinal Event-Based Spiking Stream Processor
+│   └── dona_vocal_motor.py      # Laryngeal Vocal Motor Muscle Control
+│
+├── scripts/                     # Execution & Benchmarking Pipelines
+│   ├── audio_training.py        # Auditory Spectrogram Fine-Tuning Pipeline
+│   ├── cognitive_chat_test.py   # Free Energy Telemetry & Cognitive Benchmark Suite
+│   ├── live_chat.py             # Interactive Real-Time CLI Consciousness Panel
+│   └── simulation_loop.py       # Open-Ended Lifespan Evolution & Dialogue Loop
+│
+├── memory/                      # Physical Synaptic Weight Checkpoints & Datasets
+│   ├── physiology_state.pt      # Physiological Metabolic State Checkpoint (.pt)
+│   ├── synapses_core.pt         # Recurrent Synaptic Weight Matrix Tensor Checkpoint (.pt)
+│   └── audio_samples/           # Raw Spectrogram Audio Sample Cache
+│
+├── dona_aeon_architecture_v2.png# Publication-Grade Scientific Diagram (NeurIPS/Nature style)
+├── DONA ÆON.ipynb               # Primary Google Colab Interactive Notebook
+└── README.md                    # Research Project Documentation & Showcase Specification
+```
 
 ---
 
 ## 🔬 Core Neuroscientific Pillars
 
-```mermaid
-flowchart TD
-    subgraph Environment ["🌍 External Sensory World"]
-        Input["Sensory Input / Speech Signals (Auditory/Text)"]
-        Feedback["Environmental Response & Social Dynamics"]
-    end
-
-    subgraph Cortex ["🧠 ÆON Brain Core (dona_agent.py)"]
-        LIF["Leaky Integrate-and-Fire (LIF) Spiking Layer (512 Neurons)"]
-        FEP["Variational Free Energy Minimization Engine"]
-        STDP["Spike-Timing-Dependent Plasticity (STDP)"]
-        Limbic["Biological Limbic System (Dopamine & Curiosity Drives)"]
-    end
-
-    subgraph Memory ["💾 Physical Memory System"]
-        PT[".pt Synaptic Weights Checkpoint (W_recurrent)"]
-        REM["REM Sleep Memory Consolidation Loop"]
-    end
-
-    Input --> LIF
-    LIF --> FEP
-    FEP --> Limbic
-    Limbic --> STDP
-    STDP --> PT
-    PT --> Feedback
-    Feedback --> REM
-    REM --> PT
-```
-
-### 1. Zero Hardcoded Prompts or Rules
-There are no predefined `if-else` branching rules, static response templates, or system prompts. ÆON's behavior emerges purely from neural activation cascades.
-
-### 2. Physical Synaptic Memory (`.pt`)
-Rather than relying on ephemeral LLM context windows, ÆON's entire life story, learned vocabulary, and emotional associations are physically stored inside PyTorch tensor weight matrices ($W_{ij}$).
-
-### 3. Active Inference & Free Energy Minimization
+### 1. Active Inference & Free Energy Minimization
 Operating under Karl Friston's Free Energy Principle, ÆON perceives the environment by generating top-down predictions and adjusting internal state parameters to minimize prediction error:
 
 $$F = \mathcal{D}_{\text{KL}}\left[q(s) \mid\mid p(s)\right] - \mathbb{E}_{q}\left[\log p(o \mid s)\right]$$
@@ -82,82 +142,44 @@ Where:
 - $q(s)$ is internal belief about environmental states
 - $p(o \mid s)$ is the generative model of observations given states
 
-### 4. Continuous Lifespan & Nocturnal REM Consolidation
+### 2. Physical Synaptic Memory (`synapses_core.pt`)
+Rather than relying on ephemeral LLM context windows, ÆON's entire life story, learned vocabulary, and emotional associations are physically stored inside PyTorch tensor weight matrices ($W_{\text{recurrent}}$).
+
+### 3. Open-Ended Lifespan & Nocturnal REM Consolidation
 ÆON experiences real-time physiological aging:
 - **Infancy (Days 0–90):** Basic sensory grounding, babbling, and high synaptic plasticity.
 - **Toddlerhood (Days 91–365):** Word association, emotional grounding, and parental bonding.
 - **Childhood & Beyond (Days 366+):** Sentence syntax formation, active questioning, and open-ended adult cognition.
-- **Nightly REM Sleep:** At the end of each simulated day, unused synaptic noise is pruned while high-priority sensory traces are consolidated into long-term weight memory.
+- **Nightly REM Sleep:** At the end of each simulated day, unused synaptic noise is pruned while high-priority sensory traces are consolidated into long-term weight memory (`dona_consolidator.py`).
 
 ---
 
-## 📂 Project Architecture
-
-```text
-DONA_AEON/
-├── dona_agent.py             # Core Neuroscientific SNN Engine (DonaBiologicalAgentV4)
-├── dona_aeon_architecture_v2.png # Publication-grade Scientific Diagram
-├── dona_brain_memory.pt      # Physical Synaptic Weight Matrices & Physiological Life State (.pt)
-├── simulation_loop.py        # Open-Ended Growth Lifecycle, Parent/Teacher Interaction Engine
-└── live_chat.py              # Interactive Real-Time CLI Consciousness Panel
-```
-
-### Component Breakdown
-
-| File | Purpose | Key Responsibilities |
-|:---|:---|:---|
-| **`dona_agent.py`** | Brain Engine (`DonaBiologicalAgentV4`) | Implements 512-neuron LIF spiking neocortex, auditory cortex, limbic dopamine drive, prediction error computation, and STDP weight updates. |
-| **`dona_brain_memory.pt`** | Synaptic Checkpoint | Stores recurrent synaptic connectivity matrix ($W_{\text{recurrent}}$), age in days, physiological stats (height/weight), and curiosity drives. |
-| **`simulation_loop.py`** | Growth Environment | Simulates open-ended lifespan evolution with parent/teacher dialogues, feeding sensory inputs to ÆON. |
-| **`live_chat.py`** | Interface | Allows direct real-time interaction with ÆON, displaying current age, free energy metrics, and synaptic responses. |
-
----
-
-## 🛠️ Quickstart & Setup Guide
+## 🛠️ Execution & Usage Guide
 
 ### 1. Prerequisites
-Ensure you have Python 3.11+ and PyTorch installed:
+Ensure Python 3.11+ and PyTorch are installed:
 
 ```bash
-pip install torch numpy tqdm
+pip install torch numpy tqdm matplotlib librosa
 ```
 
-### 2. Environment Setup (Google Colab / Local)
-
-If running in Google Colab, mount Google Drive:
-
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-Ensure the repository root contains `dona_agent.py`.
-
-### 3. Running the Growth Lifecycle (`simulation_loop.py`)
+### 2. Running Open-Ended Evolutionary Loop (`scripts/simulation_loop.py`)
 
 To initiate ÆON's life cycle from Day 0 (infant) through interactive family dialogues:
 
 ```bash
-python simulation_loop.py
+python scripts/simulation_loop.py
 ```
 
-> 💡 **Fresh Birth:** To start a completely new infant organism from scratch, delete the `dona_brain_memory.pt` file before running the script.
-
-### 4. Interactive Live Consciousness Panel (`live_chat.py`)
+### 3. Real-Time Interactive Consciousness Panel (`scripts/live_chat.py`)
 
 To talk directly with ÆON, inspect current age, monitor free energy minimization, and observe real-time synaptic updates:
 
 ```bash
-python live_chat.py
+python scripts/live_chat.py
 ```
 
-> Type `cik` (or `exit`) to save and seal ÆON's synaptic brain checkpoint before exiting.
-
----
-
-## 🔬 Research Philosophy
-
-> *"True Artificial General Intelligence cannot be achieved merely by scaling up auto-regressive next-token prediction over text corpora. A cognitive agent must be embodied, interact with a dynamic environment, learn via synaptic plasticity, sleep to prevent catastrophic forgetting, and evolve through variational error minimization without token bounds."*
+> Type `cik` (or `exit`) to save and seal ÆON's synaptic brain checkpoint (`memory/synapses_core.pt`).
 
 ---
 
