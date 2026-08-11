@@ -24,6 +24,12 @@
 
 <br/>
 
+### 🌌 Live Bio-Hologram Interface Preview
+
+![DONA ÆON Web UI Preview](web_ui_preview.png)
+
+<br/>
+
 ### 🎨 Live 3D Biological Organism Terminal (v4 Core)
 
 ![DONA ÆON Bio-Hologram Web UI Interface](dona_aeon_architecture_v3.png)
