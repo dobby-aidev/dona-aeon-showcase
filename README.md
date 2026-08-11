@@ -18,11 +18,21 @@
 
 <br/>
 
+### 🔬 Neuro-Biological Architecture & Live System Blueprint
+
 ![DONA ÆON Architecture Blueprint](dona_aeon_architecture_v2.png)
 
 <br/>
 
-![DONA ÆON Bio-Hologram Web UI Interface](web_ui_preview.png)
+### 🎨 Live 3D Biological Organism Terminal (v4 Core)
+
+![DONA ÆON Bio-Hologram Web UI Interface](dona_aeon_architecture_v3.png)
+
+<br/>
+
+### 🧬 Neuromorphic Biological Telemetry Popover
+
+![DONA ÆON Neuromorphic Telemetry Card](dona_aeon_architecture_v4.png)
 
 </div>
 
