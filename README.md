@@ -8,9 +8,9 @@
 
 [![Showcase](https://img.shields.io/badge/Repository-Showcase_&_Research-6366F1?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2+-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![snnTorch](https://img.shields.io/badge/snnTorch-Spiking_NN-FF9900?style=for-the-badge)]()
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Framework](https://img.shields.io/badge/Architecture-Active_Inference_&_SNN-8B5CF6?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
-[![Status](https://img.shields.io/badge/Status-Experimental_Neuroscience-10B981?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
 
 <br/>
 
@@ -28,10 +28,11 @@
 
 **DONA ÆON** is a biological digital organism simulation built from first principles. Unlike conventional Large Language Models (LLMs) or hardcoded chatbots:
 
-- **Starts at Day 0 (Blank Slate) & Open-Ended Continuous Lifespan:** Begins as a blank-slate infant neural architecture and evolves perpetually through open-ended environmental interaction.
-- **Zero Token Limits & No Context Windows:** Completely eliminates tokenizers, token budgets, and context window limits. All memories and skills reside physically in continuous synaptic weight matrices ($W_{\text{recurrent}}$ saved in `.pt` state checkpoints).
-- **No Ezber / No Stochastic Next-Token Prediction:** Does not memorize text corpora or predict next-word probabilities. Uses **Karl Friston's Free Energy Principle (FEP)** to continuously minimize variational prediction errors through active inference.
-- **Predictive Spiking Neurons & REM Consolidation:** Thinks via 512 Leaky Integrate-and-Fire (LIF) spiking neural cascades, tracking physiological growth (age, weight, height) and consolidating short-term sensory traces into long-term synaptic structures during nightly **REM sleep cycles**.
+- **Starts at Day 0 (Blank Slate) & Open-Ended Continuous Lifespan**: Begins as a blank-slate infant neural architecture and evolves perpetually through open-ended environmental interaction.
+- **Zero Token Limits & No Context Windows**: Completely eliminates tokenizers, token budgets, and context window limits. All memories and skills reside physically in continuous synaptic weight matrices ($W_{\text{recurrent}}$ saved in `.pt` state checkpoints).
+- **No Ezber / No Stochastic Next-Token Prediction**: Does not memorize text corpora or predict next-word probabilities. Uses **Karl Friston's Free Energy Principle (FEP)** to continuously minimize variational prediction errors through active inference.
+- **True SNN & Hybrid Learning**: Thinks via a 3-layer Leaky Integrate-and-Fire (LIF) spiking neural cascade (Auditory, Wernicke, and Motor Cortices), updating via biological Spike-Timing-Dependent Plasticity (STDP) and a Supervised Echo mechanism.
+- **Predictive Spiking Neurons & REM Consolidation**: Tracks physiological growth (age, weight, height) and consolidates short-term sensory traces into long-term synaptic structures during nightly **REM sleep cycles**.
 
 ---
 
@@ -40,26 +41,29 @@
 ```mermaid
 flowchart TD
     subgraph Environment ["🌍 External World & Sensory Inputs"]
-        Auditory["Auditory & Speech Input (dona_auditory.py)"]
+        Auditory["Auditory & Speech Input (Smart SSD Caching)"]
         Vision["Retinal Spiking Stream (dona_vision.py)"]
         Tactile["Tactile Receptors (dona_tactile.py)"]
     end
 
-    subgraph CoreCortex ["🧠 Core Cortical Engine (DONA_AEON/core/)"]
+    subgraph CoreCortex ["🧠 3-Layer Spiking Cortex (snnTorch)"]
         Agent["Main Agent Orchestrator (dona_agent.py)"]
-        Neocortex["512 LIF Spiking Neocortex (dona_predictive_brain.py)"]
+        LIF1["Auditory Cortex (lif1: 512 LIF Neurons)"]
+        LIF2["Wernicke / Association (lif2: 512 LIF Neurons)"]
+        LIF3["Motor Cortex (lif3: 256 LIF Neurons)"]
         FEP["Variational Free Energy Minimization (F = D_KL - E[log P])"]
         Limbic["Limbic System & Dopamine Drive (dona_limbic.py)"]
-        Lobes["Cortical Lobe Manager (dona_lobes.py)"]
-        Consolidator["REM Sleep Consolidator (dona_consolidator.py)"]
     end
 
-    subgraph SensoryModules ["🧩 Bio-Modules (DONA_AEON/modules/)"]
-        Physiology["Biological Metabolism & Physical Body (dona_physiology.py)"]
-        Sleep["Sleep Stage State Machine (dona_sleep.py)"]
-        Vocal["Laryngeal Vocal Motor (dona_vocal_motor.py)"]
-        Neuro["GABA/Glutamate Balance (dona_neurotransmitters.py)"]
+    subgraph BrocaArea ["🗣️ Broca's Area (Motor Decoder)"]
+        VocalTract["Linear Vocal Tract (Turkish Vocab Projection)"]
+        EchoTeacher["Echo Teacher (CrossEntropy Target Binding)"]
         Synth["Acoustic Vocal Synthesis (dona_audio_synth.py)"]
+    end
+    
+    subgraph SleepCycle ["🌙 Nocturnal Maintenance"]
+        Sleep["Sleep Stage State Machine (dona_sleep.py)"]
+        Consolidator["REM Sleep Consolidator (dona_consolidator.py)"]
     end
 
     subgraph MemoryStorage ["💾 Physical Weight Storage (DONA_AEON/memory/)"]
@@ -67,21 +71,23 @@ flowchart TD
         PhysState["physiology_state.pt (Age, Weight, Height Metabolism)"]
     end
 
-    Auditory --> Neocortex
-    Vision --> Neocortex
-    Tactile --> Neocortex
-    Neocortex --> FEP
+    Auditory --> LIF1
+    Vision --> Agent
+    Tactile --> Agent
+    LIF1 --> LIF2
+    LIF2 --> LIF3
+    LIF2 --> FEP
     FEP --> Limbic
-    Limbic --> Neuro
-    Neuro --> Agent
-    Agent --> Lobes
-    Lobes --> Synapses
-    Lobes --> PhysState
-    PhysState --> Physiology
+    Limbic --> Agent
+    LIF3 --> VocalTract
+    VocalTract <--> EchoTeacher
+    VocalTract --> Synth
+    LIF1 -. STDP .-> Synapses
+    LIF2 -. STDP .-> Synapses
+    LIF3 -. BPTT .-> Synapses
     Sleep --> Consolidator
     Consolidator --> Synapses
-    Agent --> Vocal
-    Vocal --> Synth
+    Agent --> PhysState
 ```
 
 ---
@@ -93,16 +99,15 @@ DONA_AEON/
 ├── core/                        # Core Neuroscientific Engine
 │   ├── dona_agent.py            # Main Agent Orchestrator V4 (DonaBiologicalAgentV4)
 │   ├── dona_auditory.py         # Spectro-Temporal Biological Auditory Processing
-│   ├── dona_brain_network.py    # Recurrent Synaptic Network Topology & Connectivity
+│   ├── dona_brain_network.py    # 3-Layer LIF Spiking Network & Motor Decoder
 │   ├── dona_consolidator.py     # Nocturnal REM Memory Pruning & Synaptic Consolidation
 │   ├── dona_limbic.py           # Biological Limbic System (Dopamine & Curiosity Drives)
 │   ├── dona_lobes.py            # Cortical Lobe Persistence Manager & Serialization
-│   └── dona_predictive_brain.py # True Spiking Neocortex (512 LIF Neurons & FEP Engine)
+│   └── dona_predictive_brain.py # FEP Engine & Neuromodulation
 │
 ├── modules/                     # Biological & Sensory Functional Subsystems
 │   ├── dona_association.py      # Cross-Modal Associative Cortex Integration
-│   ├── dona_audio_synth.py       # Vocal Tract Acoustic Speech Synthesis
-│   ├── dona_auditory.py         # Primary Auditory Receptive Fields
+│   ├── dona_audio_synth.py      # Vocal Tract Acoustic Speech Synthesis
 │   ├── dona_dopamine.py         # Neuromodulatory Reward & Curiosity Dynamics
 │   ├── dona_neurotransmitters.py# GABA / Glutamate Excitation-Inhibition Balance
 │   ├── dona_physics_body.py     # Proprioceptive Kinematics & Body Somatosensory
@@ -113,7 +118,7 @@ DONA_AEON/
 │   └── dona_vocal_motor.py      # Laryngeal Vocal Motor Muscle Control
 │
 ├── scripts/                     # Execution & Benchmarking Pipelines
-│   ├── audio_training.py        # Auditory Spectrogram Fine-Tuning Pipeline
+│   ├── audio_training.py        # Echo-Targeted SNN Hybrid Fine-Tuning Pipeline
 │   ├── cognitive_chat_test.py   # Free Energy Telemetry & Cognitive Benchmark Suite
 │   ├── live_chat.py             # Interactive Real-Time CLI Consciousness Panel
 │   └── simulation_loop.py       # Open-Ended Lifespan Evolution & Dialogue Loop
@@ -121,7 +126,7 @@ DONA_AEON/
 ├── memory/                      # Physical Synaptic Weight Checkpoints & Datasets
 │   ├── physiology_state.pt      # Physiological Metabolic State Checkpoint (.pt)
 │   ├── synapses_core.pt         # Recurrent Synaptic Weight Matrix Tensor Checkpoint (.pt)
-│   └── audio_samples/           # Raw Spectrogram Audio Sample Cache
+│   └── audio_samples/           # Smart SSD Cached Spectrogram Audio Samples
 │
 ├── dona_aeon_architecture_v2.png# Publication-Grade Scientific Diagram (NeurIPS/Nature style)
 ├── DONA ÆON.ipynb               # Primary Google Colab Interactive Notebook
@@ -137,15 +142,13 @@ Operating under Karl Friston's Free Energy Principle, ÆON perceives the environ
 
 $$F = \mathcal{D}_{\text{KL}}\left[q(s) \mid\mid p(s)\right] - \mathbb{E}_{q}\left[\log p(o \mid s)\right]$$
 
-Where:
-- $F$ is Variational Free Energy (Surprise bound)
-- $q(s)$ is internal belief about environmental states
-- $p(o \mid s)$ is the generative model of observations given states
-
 ### 2. Physical Synaptic Memory (`synapses_core.pt`)
 Rather than relying on ephemeral LLM context windows, ÆON's entire life story, learned vocabulary, and emotional associations are physically stored inside PyTorch tensor weight matrices ($W_{\text{recurrent}}$).
 
-### 3. Open-Ended Lifespan & Nocturnal REM Consolidation
+### 3. Hybrid STDP & Echo (Yankı) Mechanism
+Lower cortical layers learn acoustic features unsupervised via **Spike-Timing-Dependent Plasticity (STDP)** and homeostatic regulation. The higher motor layers map these neural spikes to physical vocabulary via a **Supervised Echo (BPTT)** teacher, moving the organism from random babbling to semantic grounding.
+
+### 4. Open-Ended Lifespan & Nocturnal REM Consolidation
 ÆON experiences real-time physiological aging:
 - **Infancy (Days 0–90):** Basic sensory grounding, babbling, and high synaptic plasticity.
 - **Toddlerhood (Days 91–365):** Word association, emotional grounding, and parental bonding.
@@ -160,7 +163,7 @@ Rather than relying on ephemeral LLM context windows, ÆON's entire life story, 
 Ensure Python 3.11+ and PyTorch are installed:
 
 ```bash
-pip install torch numpy tqdm matplotlib librosa
+pip install torch numpy tqdm matplotlib librosa snntorch torchaudio
 ```
 
 ### 2. Running Open-Ended Evolutionary Loop (`scripts/simulation_loop.py`)
