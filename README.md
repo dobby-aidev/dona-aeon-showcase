@@ -8,7 +8,7 @@
 
 [![Showcase](https://img.shields.io/badge/Repository-Showcase_&_Research-6366F1?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2+-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Framework](https://img.shields.io/badge/Architecture-Active_Inference_&_SNN-8B5CF6?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
 [![Status](https://img.shields.io/badge/Status-Experimental_Neuroscience-10B981?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
 
@@ -26,12 +26,13 @@
 
 ## 🌟 What is DONA ÆON?
 
-**DONA ÆON** is a biological digital organism simulation built from first principles. Unlike conventional Large Language Models (LLMs) or hardcoded chatbots:
+**DONA ÆON** is a biological digital organism simulation built from first principles:
 
-- **Starts at Day 0 (Blank Slate) & Open-Ended Continuous Lifespan:** Begins as a blank-slate infant neural architecture and evolves perpetually through open-ended environmental interaction.
+- **Starts at Day 0 (Blank Slate) & Open-Ended Lifespan:** Begins as a blank-slate infant neural architecture and evolves perpetually through open-ended environmental interaction.
 - **Zero Token Limits & No Context Windows:** Completely eliminates tokenizers, token budgets, and context window limits. All memories and skills reside physically in continuous synaptic weight matrices ($W_{\text{recurrent}}$ saved in `.pt` state checkpoints).
 - **No Ezber / No Stochastic Next-Token Prediction:** Does not memorize text corpora or predict next-word probabilities. Uses **Karl Friston's Free Energy Principle (FEP)** to continuously minimize variational prediction errors through active inference.
 - **Predictive Spiking Neurons & REM Consolidation:** Thinks via 512 Leaky Integrate-and-Fire (LIF) spiking neural cascades, tracking physiological growth (age, weight, height) and consolidating short-term sensory traces into long-term synaptic structures during nightly **REM sleep cycles**.
+- **Interactive Bio-Hologram Web UI & Voice Control:** Features an interactive 3D Bio-Orb particle nucleus, Web Speech API microphone input (`🎙️`), Web Speech Synthesis voice responses (`🔊`), and a slide-out glassmorphic Telemetry Drawer (`🧬`).
 
 ---
 
@@ -43,6 +44,7 @@ flowchart TD
         Auditory["Auditory & Speech Input (dona_auditory.py)"]
         Vision["Retinal Spiking Stream (dona_vision.py)"]
         Tactile["Tactile Receptors (dona_tactile.py)"]
+        SpeechIn["Web Speech API Speech-to-Text"]
     end
 
     subgraph CoreCortex ["🧠 Core Cortical Engine (DONA_AEON/core/)"]
@@ -59,15 +61,17 @@ flowchart TD
         Sleep["Sleep Stage State Machine (dona_sleep.py)"]
         Vocal["Laryngeal Vocal Motor (dona_vocal_motor.py)"]
         Neuro["GABA/Glutamate Balance (dona_neurotransmitters.py)"]
-        Synth["Acoustic Vocal Synthesis (dona_audio_synth.py)"]
+        Synth["Web Speech Synthesis (Text-to-Speech)"]
     end
 
     subgraph MemoryStorage ["💾 Physical Weight Storage (DONA_AEON/memory/)"]
         Synapses["synapses_core.pt (Synaptic Weight Matrices W_recurrent)"]
         PhysState["physiology_state.pt (Age, Weight, Height Metabolism)"]
+        DecoderState["motor_decoder.pt (Broca Vocal Tract Weights)"]
     end
 
     Auditory --> Neocortex
+    SpeechIn --> Neocortex
     Vision --> Neocortex
     Tactile --> Neocortex
     Neocortex --> FEP
@@ -77,6 +81,7 @@ flowchart TD
     Agent --> Lobes
     Lobes --> Synapses
     Lobes --> PhysState
+    Lobes --> DecoderState
     PhysState --> Physiology
     Sleep --> Consolidator
     Consolidator --> Synapses
@@ -86,7 +91,7 @@ flowchart TD
 
 ---
 
-## 📂 Modular Repository Directory Structure
+## 📂 Repository Directory Structure
 
 ```text
 DONA_AEON/
@@ -98,7 +103,13 @@ DONA_AEON/
 │   ├── dona_limbic.py           # Biological Limbic System (Dopamine & Curiosity Drives)
 │   ├── dona_lobes.py            # Cortical Lobe Persistence Manager & Serialization
 │   ├── dona_paths.py            # Cross-Platform (Colab, Windows Local, VDS) Path Resolution
-│   └── dona_predictive_brain.py # True Spiking Neocortex (512 LIF Neurons & FEP Engine)
+│   ├── dona_predictive_brain.py # True Spiking Neocortex (512 LIF Neurons & FEP Engine)
+│   └── dona_web_server.py       # FastAPI Web API Server (Telemetry & Communication Endpoints)
+│
+├── web/                         # Bio-Hologram Web Interface
+│   ├── index.html               # Single-Screen Responsive Layout & Telemetry Drawer
+│   ├── style.css                # Obsidian Dark Bio-Luminescent Glassmorphic Design System
+│   └── app.js                   # 3D Bio-Orb Canvas Engine, STT Voice & TTS Synthesis Controls
 │
 ├── modules/                     # Biological & Sensory Functional Subsystems
 │   ├── dona_association.py      # Cross-Modal Associative Cortex Integration
@@ -114,46 +125,36 @@ DONA_AEON/
 │   └── dona_vocal_motor.py      # Laryngeal Vocal Motor Muscle Control
 │
 ├── scripts/                     # Execution & Benchmarking Pipelines
-│   ├── audio_training.py        # SNN Neocortex & Broca Motor Decoder Training Pipeline
+│   ├── audio_training.py        # AdamW SNN Neocortex & Broca Motor Decoder Training Pipeline
+│   ├── colab_t4_trainer.py      # Google Colab T4/A100 GPU Parallel Training Integrator
+│   ├── expand_audio_bank.py     # Multi-Formant Acoustic Dataset Generator (150 Samples)
 │   ├── cognitive_chat_test.py   # Free Energy Telemetry & Cognitive Benchmark Suite
 │   ├── generate_audio_dataset.py# Synthetic Acoustic Audio Dataset Generator
-│   ├── live_chat.py             # Interactive Real-Time CLI Consciousness & Online Learning Panel
+│   ├── live_chat.py             # Real-Time CLI Consciousness & Online Learning Panel
+│   ├── web_chat.py              # Uvicorn Web Server Launcher
 │   └── reset_brain.py           # Day 0 Blank-Slate Brain Reset Utility
 │
 ├── memory/                      # Physical Synaptic Weight Checkpoints & Datasets
 │   ├── physiology_state.pt      # Physiological Metabolic State Checkpoint (.pt)
 │   ├── synapses_core.pt         # Recurrent Synaptic Weight Matrix Tensor Checkpoint (.pt)
 │   ├── motor_decoder.pt         # Broca Vocal Tract Motor Decoder Weights (.pt)
-│   └── audio_samples/           # Raw Acoustic Wave Audio Sample Dataset Cache
+│   └── audio_samples/           # 150 Raw Acoustic Wave Audio Sample Dataset Cache
 │
+├── run_web_ui.bat               # Single-Click Windows Web UI Launcher
 ├── dona_aeon_architecture_v2.png# Publication-Grade Scientific Diagram (NeurIPS/Nature style)
-├── DONA ÆON.ipynb               # Primary Google Colab Interactive Notebook
 └── README.md                    # Research Project Documentation & Showcase Specification
 ```
 
 ---
 
-## 🔬 Core Neuroscientific Pillars
+## 🔬 Cognitive Growth & Physiological Age Roadmap
 
-### 1. Active Inference & Free Energy Minimization
-Operating under Karl Friston's Free Energy Principle, ÆON perceives the environment by generating top-down predictions and adjusting internal state parameters to minimize prediction error:
-
-$$F = \mathcal{D}_{\text{KL}}\left[q(s) \mid\mid p(s)\right] - \mathbb{E}_{q}\left[\log p(o \mid s)\right]$$
-
-Where:
-- $F$ is Variational Free Energy (Surprise bound)
-- $q(s)$ is internal belief about environmental states
-- $p(o \mid s)$ is the generative model of observations given states
-
-### 2. Physical Synaptic Memory (`synapses_core.pt` & `motor_decoder.pt`)
-Rather than relying on ephemeral LLM context windows, ÆON's entire life story, learned vocabulary, and emotional associations are physically stored inside PyTorch tensor weight matrices ($W_{\text{recurrent}}$ and Broca Motor Decoder weights).
-
-### 3. Open-Ended Lifespan & Nocturnal REM Consolidation
-ÆON experiences real-time physiological aging:
-- **Infancy (Days 0–90):** Basic sensory grounding, babbling, and high synaptic plasticity.
-- **Toddlerhood (Days 91–365):** Word association, emotional grounding, and parental bonding.
-- **Childhood & Beyond (Days 366+):** Sentence syntax formation, active questioning, and open-ended adult cognition.
-- **Nightly REM Sleep:** At the end of each simulated day, unused synaptic noise is pruned while high-priority sensory traces are consolidated into long-term weight memory (`dona_consolidator.py`).
+| Age Stage | Epoch Range | Cognitive Milestone | Neural & Cortical Mechanism |
+| :--- | :--- | :--- | :--- |
+| **Bebeklik (0–1 Yaş)** | 0 – 500 | Sound & Phoneme Grounding | LIF Spike leak, noise suppression, 30-word receptive field mapping. |
+| **Oyun Çağı (1–6 Yaş)** | 500 – 2,500 | Word Association & Broca Speech | Broca Motor Decoder convergence, word recognition. |
+| **İlkokul (6–12 Yaş)** | 2,500 – 10,000 | Sequential Syntax & Grammar | Temporal Hebbian Plasticity ($W_{\text{recurrent}}$ transition dynamics). |
+| **Lise & İleri Biliş (12–18 Yaş)** | 10,000+ | Active Inference & Deep Dialogue | Top-down predictive coding & variational Free Energy minimization. |
 
 ---
 
@@ -163,38 +164,37 @@ Rather than relying on ephemeral LLM context windows, ÆON's entire life story, 
 Ensure Python 3.10+ and dependencies are installed:
 
 ```bash
-pip install torch numpy tqdm matplotlib scipy
+pip install torch numpy tqdm matplotlib scipy fastapi uvicorn
 ```
 
-### 2. Generate Audio Dataset (`scripts/generate_audio_dataset.py`)
-To generate labeled acoustic `.wav` audio files for Turkish vocabulary into `memory/audio_samples/`:
+### 2. Expand Audio Dataset (`scripts/expand_audio_bank.py`)
+Generates 150 pitch-, formant-, and noise-varied `.wav` audio files into `memory/audio_samples/`:
 
 ```bash
-python scripts/generate_audio_dataset.py
+python scripts/expand_audio_bank.py
 ```
 
 ### 3. Train SNN Brain & Broca Motor Decoder (`scripts/audio_training.py`)
-To train the SNN spiking neocortex and Broca Motor Decoder on audio samples:
+Train SNN spiking neocortex on GPU/CPU with AdamW and homeostatic spike regulation:
 
 ```bash
 python scripts/audio_training.py
 ```
 
-### 4. Interactive Real-Time Chat & Online Learning (`scripts/live_chat.py`)
-To talk directly with ÆON, observe real-time Free Energy minimization, and train online:
+### 4. Run Parallel Training on Google Colab T4 GPU (`scripts/colab_t4_trainer.py`)
+Generate the single-cell Colab T4 training script and run high-speed parallel training on Google Colab GPU with automatic Google Drive backup.
+
+### 5. Launch Bio-Hologram Web UI Dashboard (`scripts/web_chat.py` / `run_web_ui.bat`)
+Launch the Web UI in your browser (Windows users can double-click `run_web_ui.bat`):
 
 ```bash
-python scripts/live_chat.py
+python scripts/web_chat.py
+# Veya Windows'ta: run_web_ui.bat
 ```
+> Opens `http://127.0.0.1:7860` with real-time 3D Bio-Orb canvas, Web Speech API microphone input (`🎙️`), Web Speech Synthesis voice responses (`🔊`), and slide-out Telemetry Drawer (`🧬`).
 
-> **Interactive Reinforcement Feedback:**
-> - Send text messages to observe SNN response and online weight update.
-> - Type `+` to praise (boost dopamine & reinforce active synaptic pathway).
-> - Type `-` to correct (drop dopamine & suppress erroneous neural pathway).
-> - Type `cik` (or `exit`) to seal ÆON's brain checkpoints (`memory/*.pt`).
-
-### 5. Reset Brain to Day 0 Blank Slate (`scripts/reset_brain.py`)
-To wipe all `.pt` memory checkpoints and start training from a Day 0 blank slate infant brain:
+### 6. Reset Brain to Day 0 Blank Slate (`scripts/reset_brain.py`)
+Wipe all `.pt` memory checkpoints and start training from a Day 0 blank slate infant brain:
 
 ```bash
 python scripts/reset_brain.py
