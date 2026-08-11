@@ -207,9 +207,25 @@ python scripts/reset_brain.py
 
 ---
 
-## 📜 Copyright & Showcase Notice
+## 📜 Citation & Academic Reference
 
-Proprietary Research & Showcase Project by **dobby-aidev**. All rights reserved.
+If you use **DONA ÆON** or its Spiking Neural Network / Free Energy Principle architecture in your research, please cite:
+
+```bibtex
+@article{dona_aeon_2026,
+  title={DONA ÆON: Active Inference & Embodied Spiking Neural Organism Simulation},
+  author={Dona ÆON Research Team},
+  year={2026},
+  publisher={GitHub Research Showcase},
+  url={https://github.com/dobby-aidev/dona-aeon-showcase}
+}
+```
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See [`LICENSE`](file:///c:/Users/ferda/Desktop/Dona_Æon/LICENSE) for more information.
 
 ---
 
