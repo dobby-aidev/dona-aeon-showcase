@@ -20,6 +20,10 @@
 
 ![DONA ÆON Architecture Blueprint](dona_aeon_architecture_v2.png)
 
+<br/>
+
+![DONA ÆON Bio-Hologram Web UI Interface](web_ui_preview.png)
+
 </div>
 
 ---
@@ -30,6 +34,7 @@
 
 - **Starts at Day 0 (Blank Slate) & Open-Ended Lifespan:** Begins as a blank-slate infant neural architecture and evolves perpetually through open-ended environmental interaction.
 - **Zero Token Limits & No Context Windows:** Completely eliminates tokenizers, token budgets, and context window limits. All memories and skills reside physically in continuous synaptic weight matrices ($W_{\text{recurrent}}$ saved in `.pt` state checkpoints).
+- **MindPalaceHippocampus (`MindPalaceHippocampus`):** ÆON utilizes a biological Method of Loci architecture (`modules/dona_association.py`) modeled after entorhinal grid cells and hippocampal place cells. Words and sensory concepts are bound to 3D spatial grid coordinates $(x, y, z)$ in a 1000-room mental palace tensor, enabling interference-free spatial memory storage and top-down associative recall.
 - **No Ezber / No Stochastic Next-Token Prediction:** Does not memorize text corpora or predict next-word probabilities. Uses **Karl Friston's Free Energy Principle (FEP)** to continuously minimize variational prediction errors through active inference.
 - **Predictive Spiking Neurons & REM Consolidation:** Thinks via 512 Leaky Integrate-and-Fire (LIF) spiking neural cascades, tracking physiological growth (age, weight, height) and consolidating short-term sensory traces into long-term synaptic structures during nightly **REM sleep cycles**.
 - **Interactive Bio-Hologram Web UI & Voice Control:** Features an interactive 3D Bio-Orb particle nucleus, Web Speech API microphone input (`🎙️`), Web Speech Synthesis voice responses (`🔊`), and a slide-out glassmorphic Telemetry Drawer (`🧬`).
