@@ -35,44 +35,10 @@ The system utilizes **Active Inference** and the **Free Energy Principle** mecha
 
 ## 🏗️ Architecture
 
-![Architecture](assets/ui_showcase.png) <!-- TODO: Architecture diagram can be added here -->
-
 1. **Cochlear Receptor (Audio Input):** Sound received via Web Speech API or .wav file is converted into a spectrogram using Librosa.
 2. **SNN Neocortex (Processing):** The Spiking Neural Network converts these frequencies into excitatory currents (LIF potentials).
 3. **Broca Motor Output (Speech Production):** Potentials leaking from the neocortex trigger motor neurons in the Broca area to find the frequency target (word/syllable) with the highest potential.
 4. **Real Voice (Audio Output):** The targeted word or mumble is converted into high-quality audio using Edge-TTS and played back through the web interface.
-
-## 🚀 Installation
-
-To run the system on your local machine or a cloud GPU server:
-
-### Requirements
-- Python 3.9 or higher
-- Speaker and Microphone hardware
-
-### Steps
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/your-username/dona-aeon.git
-   cd dona-aeon
-   ```
-
-2. **Install Required Packages**
-   ```bash
-   pip install -r requirements.txt
-   pip install edge-tts
-   ```
-
-3. **Start the Server**
-   To start the system, load the SNN, and open the web server:
-   ```bash
-   python scripts/web_chat.py
-   ```
-
-4. **Open in Browser**
-   Once the server is running, it will automatically open in your browser. If it doesn't, navigate to:
-   `http://127.0.0.1:7860`
 
 ## 🎮 Usage Guide
 
@@ -81,4 +47,4 @@ To run the system on your local machine or a cloud GPU server:
 - **Recording Your Own Voice:** From the "Record Audio" menu, you can teach your own voice frequencies to ÆON's databank as a `.wav` file. The more ÆON listens to you, the better it will recognize your voice formants.
 
 ---
-*Developer: Ferda | DONA ÆON Project - Coded with the Free Energy Principle.*
+*Developer: Dobby B | DONA ÆON Project - Coded with the Free Energy Principle.*
