@@ -91,7 +91,22 @@ DONA ÆON's biological architecture is distributed across highly specialized neu
 |:---|:---|:---|
 | **`app.js`** | **WebGL Bio-Orb** | Translates live telemetry (FEP, ATP, Dopamine) into particle physics, spinning and reacting to raw audio input. |
 | **`index.html`** | **Cinematic Layout** | The dark-themed, military-grade biological containment UI housing the living organism. |
-```
+
+### 💾 Physical Synaptic Memory (`/memory`)
+| File | Neuroscientific Function | Key Responsibilities |
+|:---|:---|:---|
+| **`synapses_core.pt`** | **Long-Term Memory** | The physical PyTorch tensor matrix storing $W_{ij}$ synaptic weights and connections. |
+| **`motor_decoder.pt`** | **Motor Cortex Memory** | Stores the learned mappings between firing patterns and phonetic syllables. |
+| **`physiology_state.pt`** | **Biological State** | Persists physical age, life cycles, max ATP threshold, and homeostasis baselines. |
+| **`audio_dataset_bank.zip`**| **Sensory Traces** | A repository of pre-processed external auditory stimuli (raw phoneme `.wav` samples). |
+
+### 🛠️ Core Scripts & Tools (`/scripts`)
+| Script | Utility Function | Key Responsibilities |
+|:---|:---|:---|
+| **`live_chat.py`** | **CLI Consciousness Panel** | An interactive command-line interface to talk with ÆON and monitor free energy metrics. |
+| **`audio_training.py`** | **Sensory Grounding** | Feeds massive batches of `.wav` datasets into the SNN for early-stage language acquisition. |
+| **`download_youtube_speech.py`**| **Data Extraction** | Scrapes diverse human speech datasets from YouTube to enrich the auditory training corpus. |
+| **`reset_brain.py`** | **Neural Wiping** | Deletes all `.pt` checkpoints, inducing a fresh "birth" (Day 0) with zero synaptic bias. |
 
 ---
 
