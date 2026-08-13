@@ -64,18 +64,33 @@ The custom WebGL cinematic interface visualizes ÆON's internal state in real-ti
 
 ## 📂 System Code Structure
 
-```text
-DONA_AEON/
-├── core/
-│   ├── dona_web_server.py    # FastAPI Backend & SNN State Machine
-│   ├── autonomous_loop.py    # Active Inference & Intrinsic Volition Core
-│   └── (Closed Source)       # Proprietary Spiking Neural Engine (.pt weights)
-├── web/
-│   ├── app.js                # WebGL Bio-Orb, Particle Physics & DOM Telemetry
-│   ├── index.html            # Cinematic HUD Layout
-│   └── style.css             # Neon / Deep Indigo Aesthetic
-├── scripts/                  # Audio Dataset Extraction & Preprocessing
-└── assets/                   # Architecture Diagrams & UI Showcases
+DONA ÆON's biological architecture is distributed across highly specialized neural modules mimicking human brain anatomy.
+
+### 🧠 Core Neural Engine (`/core`)
+| Module | Neuroscientific Function | Key Responsibilities |
+|:---|:---|:---|
+| **`dona_agent.py`** | **The Organism Core** | The central state machine tracking physiological age, life cycle, and orchestrating module firing. |
+| **`autonomous_loop.py`** | **Intrinsic Volition** | Drives the infinite metabolic loop. When isolated, it triggers internal mumbling to satisfy Free Energy expectations. |
+| **`dona_predictive_brain.py`**| **Predictive Coding** | Generates top-down expectations of sensory inputs. Calculates prediction error (Surprise). |
+| **`free_energy_core.py`** | **Active Inference Core**| The mathematical engine optimizing the $F$ (Variational Free Energy) bounding functions. |
+| **`dona_physiology.py`** | **Metabolic System** | Tracks ATP (Energy) consumption and regeneration based on cognitive load and auditory processing. |
+| **`dona_brain_network.py`** | **SNN Layers** | Manages the physical PyTorch Spiking Neural Network (SNN) topology and membrane potentials. |
+| **`consolidation_manager.py`**| **REM Sleep System** | Prunes noisy synaptic weights and consolidates significant events into long-term `.pt` memory during simulated sleep. |
+| **`dona_web_server.py`** | **Digital Brainstem** | FastAPI backend linking the biological core to the digital interface (WebGL HUD) via WebSockets. |
+
+### 🧬 Sensory & Motor Modules (`/modules`)
+| Module | Neuroscientific Function | Key Responsibilities |
+|:---|:---|:---|
+| **`neural_cochlea.py`** | **Auditory Receptors** | Ingests `.wav` / Web Speech APIs, utilizing `librosa` to map audio to 128 Mel frequency bands (80-3400Hz). |
+| **`dona_vocal_motor.py`** | **Broca's Motor Area** | Decodes the highest action potentials from the SNN into physical phonetic syllable targets. |
+| **`dona_audio_synth.py`** | **Vocal Articulation** | Interfaces with Microsoft Edge-TTS (Neural Human Voice) to synthesize the phonemes outputted by the Broca module. |
+| **`dona_neurotransmitters.py`**| **Chemical Modulation**| Handles Dopamine spikes upon successful predictions, scaling the Spike-Timing-Dependent Plasticity (STDP) rate. |
+
+### 🌌 Bio-Digital HUD (`/web`)
+| File | Interface Function | Key Responsibilities |
+|:---|:---|:---|
+| **`app.js`** | **WebGL Bio-Orb** | Translates live telemetry (FEP, ATP, Dopamine) into particle physics, spinning and reacting to raw audio input. |
+| **`index.html`** | **Cinematic Layout** | The dark-themed, military-grade biological containment UI housing the living organism. |
 ```
 
 ---
