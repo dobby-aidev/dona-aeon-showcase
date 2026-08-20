@@ -6,10 +6,10 @@
 
 <br/>
 
-[![Architecture](https://img.shields.io/badge/Architecture-Neuromorphic_Digital_Mind_(NDM)-6366F1?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
-[![Status](https://img.shields.io/badge/Status-Active_Neuromorphic_Engine-10B981?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
-[![Backend](https://img.shields.io/badge/Backend-PyTorch_SNN_&_Bio_Cochlea-EE4C2C?style=for-the-badge)](https://pytorch.org/)
-[![Vocal Synthesis](https://img.shields.io/badge/Vocal_Motor-Two--Mass_Glottal_%26_Kelly--Lochbaum-3776AB?style=for-the-badge)]()
+[![Architecture](https://img.shields.io/badge/Architecture-Neuromorphic_Digital_Mind_(NDM)-6366F1?style=for-the-badge&logo=cpu)](https://github.com/dobby-aidev/dona-aeon-showcase)
+[![Status](https://img.shields.io/badge/Status-Active_Neuromorphic_Engine-10B981?style=for-the-badge&logo=activity)](https://github.com/dobby-aidev/dona-aeon-showcase)
+[![Backend](https://img.shields.io/badge/Backend-PyTorch_SNN_&_Bio_Cochlea-EE4C2C?style=for-the-badge&logo=pytorch)](https://pytorch.org/)
+[![Vocal Synthesis](https://img.shields.io/badge/Vocal_Motor-Two--Mass_Glottal_%26_Kelly--Lochbaum-3776AB?style=for-the-badge&logo=waveform)](https://github.com/dobby-aidev/dona-aeon-showcase)
 
 <br/>
 
@@ -17,9 +17,14 @@
 
 <br/>
 
-<img src="./assets/ndm_architecture_ui.jpg" alt="DONA ÆON Neuromorphic Digital Mind Architecture" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); margin-top: 20px;">
+<img src="./assets/ndm_architecture_ui.jpg" alt="DONA ÆON Neuromorphic Digital Mind Architecture" width="100%" style="border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,0.7); margin-top: 15px;">
 
 </div>
+
+---
+
+> [!IMPORTANT]
+> **Zero LLM & Zero External API Dependency**: DONA ÆON does not rely on OpenAI, Gemini, or external cloud LLMs. It operates 100% locally using event-driven Spiking Neural Networks (SNN) and physical vocal tract acoustic modeling.
 
 ---
 
@@ -27,29 +32,40 @@
 
 **DONA ÆON** is an **Autonomous Neuromorphic Digital Mind (NDM)** built from first principles. Unlike conventional Large Language Models (LLMs) or hardcoded chatbots, ÆON operates as a virtual biological neocortex:
 
-- **Zero LLM / External API Dependency:** Operates 100% locally via event-driven Spiking Neural Networks (SNN).
-- **128-Channel ERB Gammatone Auditory Cochlea:** Perceives raw sound waves through a 128-channel logarithmic ERB-scale Gammatone filter bank ($20\text{Hz} - 20.000\text{Hz}$), converting audio into biological frequency spike trains ($512$-dim).
-- **Unsupervised Acoustic Spectrogram Reconstruction:** Features an unsupervised $512$-dim predictive coding auto-encoder that learns continuous acoustic representations directly from raw human speech without forced discrete word labels.
-- **Temporal Phoneme Sequence Decoder:** Decodes temporal spike history ($T$ frames) into 30 Turkish phoneme classes ($29$ Turkish letters + `<SIL>`), enabling open-ended phoneme combination and speech formation.
-- **Biomimetic Vocal Motor Synthesis:** Synthesizes 48kHz physical PCM speech output via Two-Mass Glottal Vocal Cord dynamics and a 16-section Kelly-Lochbaum Acoustic Tube Filter.
-- **Karl Friston's Free Energy Principle (FEP):** Continuously minimizes variational free energy (surprise bound) between internal generative models and environmental auditory observations.
-- **Live Biological Telemetry:** Tracks ATP (Cellular Energy) consumption, Dopamine (Synaptic Plasticity), and intrinsic metabolic homeostasis.
+- **⚡ Event-Driven SNN Neocortex:** 2048 Leaky Integrate-and-Fire (LIF) spiking neurons operating on $2.1\text{M+}$ action-potential spikes per epoch.
+- **🦻 128-Channel ERB Gammatone Bio-Cochlea:** Perceives raw sound waves through a 128-channel logarithmic ERB-scale Gammatone filter bank ($20\text{Hz} - 20.000\text{Hz}$), converting audio into biological frequency spike trains ($512$-dim).
+- **📉 Unsupervised Acoustic Spectrogram Reconstruction:** Features an unsupervised $512$-dim predictive coding auto-encoder that learns continuous acoustic representations directly from raw human speech without forced discrete word labels.
+- **🔤 Temporal Phoneme Sequence Decoder:** Decodes temporal spike history ($T$ frames) into 30 Turkish phoneme classes ($29$ Turkish letters + `<SIL>`), enabling open-ended phoneme combination and speech formation.
+- **🗣️ Biomimetic Vocal Motor Synthesis:** Synthesizes 48kHz physical PCM speech output via Two-Mass Glottal Vocal Cord dynamics and a 16-section Kelly-Lochbaum Acoustic Tube Filter (100% physical voice generation, zero TTS libraries).
+- **🧠 Karl Friston's Free Energy Principle (FEP):** Continuously minimizes variational free energy (surprise bound) between internal generative models and environmental auditory observations.
+- **🩸 Live Biological Telemetry:** Tracks ATP (Cellular Energy) consumption, Dopamine (Synaptic Plasticity), and intrinsic metabolic homeostasis.
 
 ---
 
 ## 🌌 Live Web Interface & Bio-Digital HUD
 
-DONA ÆON features a live WebGL-powered biological containment HUD (`dona_web_server.py`) serving real-time SNN telemetry, Free Energy graphs, Dopamine levels, and an interactive Bio-Orb reactor.
+DONA ÆON includes a WebGL-powered biological containment HUD (`dona_web_server.py`) serving real-time SNN telemetry, Free Energy graphs, Dopamine levels, and an interactive Bio-Orb reactor.
 
 <div align="center">
-  <img src="./assets/dona_aeon_web_hud.png" alt="DONA ÆON Live Web UI & Telemetry HUD" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); margin-top: 15px;">
+  <img src="./assets/dona_aeon_web_hud.png" alt="DONA ÆON Live Web UI & Telemetry HUD" width="100%" style="border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,0.7); margin-top: 15px;">
 </div>
 
 ---
 
-## 🔬 Core Neuroscientific Pillars
+## 🔬 Evolution Comparison: Legacy Agent vs. NDM Architecture
 
-### 1. Neuromorphic Digital Mind (NDM) Pipeline
+| Architectural Dimension | Legacy Spiking Agent (v4) | NDM Architecture (v5 Current) |
+| :--- | :--- | :--- |
+| **Cognitive Core** | 512 LIF Neurons | **2048 Massively Parallel LIF Spiking Neocortex** |
+| **Auditory Sensor** | Mel-Spectrogram Parsing | **128-Channel ERB Gammatone Filter Bank Cochlea** |
+| **Audio Learning** | Forced 30-Word Discrete Classification | **Unsupervised Acoustic Spectrogram Reconstruction** |
+| **Language Output** | Hardcoded 30-Word Lookup Table | **Temporal Phoneme Sequence Auto-Encoder ($29$ Letters + `<SIL>`)** |
+| **Voice Articulation** | External Microsoft Edge-TTS Library | **Biomimetic Two-Mass Glottal & Kelly-Lochbaum Acoustic Filter** |
+| **Learning Paradigm** | Supervised CrossEntropy Loss | **Dual-Loss: Unsupervised Reconstruction + Phoneme Sequence STDP** |
+
+---
+
+## 🧬 Neuromorphic Pipeline
 
 ```mermaid
 graph TD
@@ -68,7 +84,10 @@ graph TD
     J --> K["48kHz Biological PCM Speech Output"]
 ```
 
-### 2. Active Inference & Free Energy Minimization
+---
+
+## 🔬 Active Inference & Mathematical Foundations
+
 Operating under Karl Friston's Free Energy Principle, ÆON perceives the environment by generating top-down predictions and adjusting internal state parameters to minimize prediction error:
 
 $$F = \mathcal{D}_{\text{KL}}\left[q(s) \mid\mid p(s)\right] - \mathbb{E}_{q}\left[\log p(o \mid s)\right]$$
@@ -78,15 +97,9 @@ Where:
 - $q(s)$ is internal belief about environmental states
 - $p(o \mid s)$ is the generative model of observations given states
 
-### 3. Biological Telemetry & Neurochemistry
-- **ATP (Energy):** Depletes during heavy auditory processing and active articulation; regenerates during rest phases.
-- **Dopamine (DPM):** Spikes upon successful prediction of incoming sensory formants, dynamically scaling the Spike-Timing-Dependent Plasticity (STDP) rate.
-
 ---
 
-## 📂 System Code Structure
-
-DONA ÆON's NDM architecture is distributed across specialized neural modules mimicking human brain anatomy.
+## 📂 System Architecture Breakdown
 
 ### 🧠 Core Neural Engine (`/core`)
 | Module | Neuroscientific Function | Key Responsibilities |
