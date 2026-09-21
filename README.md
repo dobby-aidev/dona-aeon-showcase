@@ -2,55 +2,56 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=DONA%20%C6ON%20%C2%B7%20NDM&fontSize=55&fontColor=fff&animation=twinkling&fontAlignY=38&desc=Autonomous%20Neuromorphic%20Digital%20Mind%20%C2%B7%20Spiking%20Neural%20Organism&descAlignY=58&descSize=16" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=DONA%20CODEX%20%C2%B7%20%C6ON%20NDM&fontSize=52&fontColor=d4af37&animation=twinkling&fontAlignY=38&desc=Autonomous%20Neuromorphic%20Digital%20Mind%20%C2%B7%20Spiking%20Neural%20Organism&descAlignY=58&descSize=16" width="100%"/>
 
 <br/>
 
-[![Architecture](https://img.shields.io/badge/Architecture-Neuromorphic_Digital_Mind_(NDM)-6366F1?style=for-the-badge&logo=cpu)](https://github.com/dobby-aidev/dona-aeon-showcase)
-[![Status](https://img.shields.io/badge/Status-Active_Development-10B981?style=for-the-badge&logo=activity)](https://github.com/dobby-aidev/dona-aeon-showcase)
+[![Architecture](https://img.shields.io/badge/Architecture-Neuromorphic_Digital_Mind_(NDM)-d4af37?style=for-the-badge&logo=cpu)](https://github.com/dobby-aidev)
+[![Design](https://img.shields.io/badge/Design_System-Dona_Codex_Obsidian_Gold-f5d77f?style=for-the-badge)](https://dobby-aidev.github.io/dobby-aidev/)
+[![Status](https://img.shields.io/badge/Status-Active_Development-10B981?style=for-the-badge&logo=activity)](https://github.com/dobby-aidev)
 [![Backend](https://img.shields.io/badge/Backend-PyTorch_SNN_%26_Bio_Cochlea-EE4C2C?style=for-the-badge&logo=pytorch)](https://pytorch.org/)
-[![Memory](https://img.shields.io/badge/Memory-Episodic_Palace_%26_REM_Consolidation-F59E0B?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
-[![Vocal](https://img.shields.io/badge/Vocal_Motor-Two--Mass_Glottal_%26_Kelly--Lochbaum-3776AB?style=for-the-badge)](https://github.com/dobby-aidev/dona-aeon-showcase)
+[![Memory](https://img.shields.io/badge/Memory-Episodic_Palace_%26_REM_Consolidation-d4af37?style=for-the-badge)](https://github.com/dobby-aidev)
+[![Vocal](https://img.shields.io/badge/Vocal_Motor-48kHz_Natural_Adult_Acoustics-3776AB?style=for-the-badge)](https://github.com/dobby-aidev)
 
 <br/>
 
-> *"True Artificial General Intelligence is not a stochastic LLM predicting text tokens; it is a Neuromorphic Digital Mind (NDM) that perceives raw biological auditory frequency spectra, minimizes variational free energy, consolidates memories into a physical Synaptic Memory Palace, and speaks through physical acoustic motor articulation."*
+> *"True Artificial General Intelligence is not a cloud LLM predicting probabilistic tokens; it is a Neuromorphic Digital Mind (NDM) that perceives raw biological auditory spectra through a 128-channel Gammatone Cochlea, consolidates episodic experiences into a physical Synaptic Palace, and articulates crystal-clear speech through adult human bio-acoustics."*
 
 <br/>
-
-<img src="./assets/ndm_architecture_ui.jpg" alt="DONA ÆON Neuromorphic Digital Mind Architecture" width="100%" style="border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,0.7); margin-top: 15px;">
 
 </div>
 
 ---
 
 > [!IMPORTANT]  
-> **Zero LLM & Zero External API Dependency:** DONA ÆON does not rely on OpenAI, Gemini, or any cloud-based Large Language Models. It operates 100% locally, utilizing event-driven Spiking Neural Networks (SNN), physical synaptic memory consolidation, and purely physical vocal tract acoustic modeling.
+> **Zero Cloud LLM & Zero External API Dependency:** DONA ÆON does not rely on OpenAI, Gemini, Claude, or any external conversational LLM services. It operates 100% locally on-device, running event-driven Spiking Neural Networks (SNN), physical synaptic memory matrices, and a high-fidelity 48kHz adult human acoustic voice motor trained from real empirical speech corpora.
 
 ---
 
 ## 🌟 The Vision: What is DONA ÆON?
 
-**DONA ÆON** is a paradigm shift. It is an **Autonomous Neuromorphic Digital Mind (NDM)** constructed from the ground up using biological first principles. Unlike conventional LLMs or deterministic conversational agents, ÆON operates as a living, virtual biological neocortex. 
-
-It does not generate text; it *experiences* sound, *thinks* in action potentials, and *articulates* speech through a simulated biological vocal tract.
+**DONA ÆON** is an official cognitive intelligence project within the **Dona Codex** systems platform (by `@dobby-aidev`). It represents an **Autonomous Neuromorphic Digital Mind (NDM)** constructed from biological first principles. Unlike conventional text-in/text-out transformers, ÆON operates as an embodied neocortical organism: it *hears* acoustic frequencies, *thinks* in action-potential spike trains, *feels* through a 5-factor neurochemical limbic pool, and *speaks* with a warm, natural adult human voice.
 
 ### 🧬 Core Biological Systems
 
 *   **⚡ Event-Driven SNN Neocortex:** Powered by 2048 Leaky Integrate-and-Fire (LIF) conductance-based spiking neurons, processing over 2.1 million action-potential spikes per epoch.
-*   **🏰 The Episodic Memory Palace:** A sophisticated three-tier memory architecture mapping Temporal Corridors (Year→ms) to Topological Attractor Rooms (thematic clusters). Memories are encapsulated dynamically and permanently sealed into physical synaptic weight matrices (synapses_core.pt) during nightly REM Sleep consolidation.
-*   **🦻 128-Channel ERB Gammatone Bio-Cochlea:** Mimicking the human ear, this filter bank (20Hz–20kHz) translates raw acoustic waves directly into 512-dimensional biological frequency spike trains.
-*   **🗣️ Biomimetic Vocal Motor Synthesis:** True 48kHz physical PCM speech is synthesized organically via a Two-Mass Glottal Vocal Cord dynamic simulation paired with a 16-section Kelly-Lochbaum Acoustic Tube. **Zero text-to-speech (TTS) libraries are used.**
-*   **🧠 Active Inference (FEP):** Driven by Karl Friston's Free Energy Principle, ÆON continuously minimizes variational free energy—constantly updating its generative models to reduce sensory "surprise".
-*   **🧪 5-Modulator Limbic Neurochemistry:** A dynamic fluid system of DA (Dopamine), NE (Noradrenaline), 5-HT (Serotonin), ACh (Acetylcholine), and OXT (Oxytocin) that autonomously scales neuroplasticity, focus, and emotional arousal.
-*   **🩸 Metabolic Homeostasis:** ÆON "tires". It tracks ATP (cellular energy) consumption, Lactate accumulation, and manages intrinsic fatigue cycles.
-*   **🎭 Thalamic Relay & TRN Gating:** The Thalamic Reticular Nucleus dynamically gates sensory salience, shifting between *tonic* modes for relaxed processing and *burst* modes in response to auditory anomalies.
+*   **🏰 The Episodic Memory Palace:** A three-tier memory architecture mapping Temporal Corridors (Year→ms) to Topological Attractor Rooms. Experiences are permanently consolidated into physical synaptic weight matrices (`synapses_core.pt`) during REM Sleep cycles.
+*   **🦻 128-Channel ERB Gammatone Bio-Cochlea:** Translates raw acoustic waves (20Hz–20kHz) directly into 512-dimensional biological frequency spike trains.
+*   **🗣️ Natural Adult Human Acoustic Voice Motor (48kHz):** Zero metallic static, zero robotic clicking. ÆON articulates clear, organic speech modulated dynamically by pitch ($F_0$) and neurochemical states (DA, NE, OXT, 5-HT).
+*   **🧠 Active Inference (FEP):** Continuously minimizes Karl Friston's Variational Free Energy to reduce perceptual surprise and adapt to familiar speakers.
+*   **🧪 5-Modulator Limbic Neurochemistry:** Dynamic fluid pool of DA (Dopamine), NE (Noradrenaline), 5-HT (Serotonin), ACh (Acetylcholine), and OXT (Oxytocin).
+*   **🩸 Metabolic Homeostasis:** Real-time ATP consumption, Lactate accumulation, and intrinsic fatigue monitoring.
+*   **🎭 Thalamic Relay & Speaker Biometrics:** Recognizes familiar voices (e.g. Alkan) to elevate Oxytocin and trust, while alerting on stranger voices with elevated Noradrenaline.
 
 ---
 
-## 🌌 Live Web Interface & Bio-Acoustic HUD
+## 🌌 Live Dona Codex Telemetry HUD
 
-Step into the containment core. The DONA ÆON environment features a 100% Voice-Driven Neuromorphic HUD, delivering real-time SNN telemetry, Free Energy graphs, limbic system readouts, and a fully interactive, WebGL-powered Bio-Orb reactor.
+The DONA ÆON containment dashboard follows the official **Dona Codex Design System** (`dona-codex-site-knowledge`):
+- **Obsidian & Gold Color Spectrum:** Rich deep obsidian (`#07080e`), anthracite panels (`#131622`), and luminous gold accents (`#d4af37`, `#f5d77f`).
+- **Typography:** Display titles in *Cinzel*, telemetry and HUD metrics in *JetBrains Mono*, body in *Plus Jakarta Sans*.
+- **Interactive Bio-Orb:** Real-time canvas reactor tracking cursor parallax and pulsing responsively with acoustic transmission.
+- **Pure Bio-Acoustic Voice Transceiver:** Push-to-talk and spacebar voice transmission with instant local speech playback.
 
 <div align="center">
   <img src="./assets/dona_aeon_web_hud.png" alt="DONA ÆON Live Web UI & Telemetry HUD" width="100%" style="border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,0.7); margin-top: 15px;">
