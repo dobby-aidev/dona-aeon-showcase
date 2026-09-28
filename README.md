@@ -2,8 +2,6 @@
 
 <div align=center>
 
-<img src=https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=DONA%20CODEX%20%C2%B7%20%C6ON%20NDM&fontSize=52&fontColor=d4af37&animation=twinkling&fontAlignY=38&desc=Autonomous%20Neuromorphic%20Digital%20Mind%20%C2%B7%20Spiking%20Neural%20Organism&descAlignY=58&descSize=16 width=100%/>
-
 <br/>
 
 [![Architecture](https://img.shields.io/badge/Architecture-Neuromorphic_Digital_Mind_(NDM)-d4af37?style=for-the-badge&logo=cpu)](https://github.com/dobby-aidev)
