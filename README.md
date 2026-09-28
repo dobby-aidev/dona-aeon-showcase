@@ -1,4 +1,4 @@
-﻿# 🧠 DONA ÆON — Neuromorphic Digital Mind (NDM v5.0)
+﻿# 🧠 DONA ÆON — Neuromorphic Digital Mind v5.0
 
 <div align=center>
 
