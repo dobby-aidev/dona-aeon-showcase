@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DONA ÆON — Neuromorphic Digital Mind</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='cyan' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff'/%3E%3Cstop offset='40%25' stop-color='%2300f0ff'/%3E%3Cstop offset='100%25' stop-color='%230077b6'/%3E%3C/linearGradient%3E%3ClinearGradient id='violet' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff'/%3E%3Cstop offset='50%25' stop-color='%23b026ff'/%3E%3Cstop offset='100%25' stop-color='%234a0072'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M256 32L464 240L256 448L48 240Z' stroke='url(%23cyan)' stroke-width='16' fill='none' opacity='0.8'/%3E%3Cpath d='M256 96L396 236L256 376L116 236Z' fill='url(%23violet)' opacity='0.9'/%3E%3Ccircle cx='256' cy='236' r='32' fill='%2300f0ff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/web/style.css?v=16.0">
+</head>
+<body>
+
+  <!-- WebGL 3D Canvas (The Runway & Volumetric Dust) -->
+  <canvas id="webgl-canvas" class="webgl-canvas"></canvas>
+
+  <!-- Disintegration Explosion Canvas -->
+  <canvas id="disintegration-canvas" class="disintegration-canvas"></canvas>
+
+  <!-- Atmospheric Layers (Dona Codex Standart) -->
+  <div class="viewport-overlay"></div>
+  <div class="scanline-grid"></div>
+  <div class="cinematic-atmosphere">
+    <div class="anamorphic-beam"></div>
+    <div class="film-grain"></div>
+    <div class="cinematic-vignette"></div>
+  </div>
+  <div id="cinematic-blur-overlay" class="cinematic-blur-overlay"></div>
+
+  <!-- HUD HEADER -->
+  <header class="hud-header">
+    <!-- Col 1: Audio Toggle Pill -->
+    <div class="header-col-left">
+      <button class="hud-pill-btn audio-pill" id="audio-toggle-btn" aria-label="Ses Aç/Kapat">
+        <span class="pill-dot" id="audio-live-dot"></span>
+        <span id="sound-btn-text">BİYO-SES: AÇIK</span>
+      </button>
+    </div>
+
+    <!-- Col 2: Brand Group (Emblem SVG + Logotype) -->
+    <div class="header-col-center">
+      <a href="#0" class="brand-link" id="brand-home-link">
+        <!-- Dona Codex / Æon Diamond Emblem -->
+        <svg class="brand-emblem" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="emblemCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="40%" stop-color="#00f0ff"/>
+              <stop offset="100%" stop-color="#0077b6"/>
+            </linearGradient>
+            <linearGradient id="emblemVioletGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="50%" stop-color="#b026ff"/>
+              <stop offset="100%" stop-color="#4a0072"/>
+            </linearGradient>
+          </defs>
+          <path d="M256 32L464 240L256 448L48 240Z" stroke="url(#emblemCyanGrad)" stroke-width="12" fill="none" opacity="0.6"/>
+          <path d="M256 96L396 236L256 376L116 236Z" fill="url(#emblemVioletGrad)" opacity="0.85"/>
+          <circle cx="256" cy="236" r="32" fill="#00f0ff"/>
+        </svg>
+        <span class="brand-logotype">DONA ÆON</span>
+      </a>
+    </div>
+
+    <!-- Col 3: Language Pill & Telemetry Trigger -->
+    <div class="header-col-right">
+      <button class="hud-pill-btn lang-pill" id="lang-toggle-btn" aria-label="Dil Değiştir">
+        <span class="lang-opt active" id="lang-tr">TR</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-opt" id="lang-en">EN</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- TELEMETRY RAIL (Right Desktop Navigation) -->
+  <aside class="telemetry-rail" id="telemetry-rail" aria-label="Mekansal Derinlik Telemetrisi">
+    <div class="depth-hud">
+      <div class="depth-label">DERİNLİK</div>
+      <div class="depth-value" id="depth-readout">Z · 000 M</div>
+    </div>
+    <div class="telemetry-track">
+      <div class="telemetry-progress-fill" id="telemetry-progress"></div>
+    </div>
+    <div class="sector-indicator-wrap">
+      <div class="sector-badge" id="sector-badge">00 // GİRİŞ</div>
+    </div>
+    <div class="sector-nav-dots" id="sector-dots">
+      <!-- 8 Milestone Jump Dots -->
+      <button class="sector-dot active" data-sector="0" title="Giriş"><span class="dot-inner"></span></button>
+      <button class="sector-dot" data-sector="1" title="Koklea"><span class="dot-inner"></span></button>
+      <button class="sector-dot" data-sector="2" title="Neokorteks"><span class="dot-inner"></span></button>
+      <button class="sector-dot" data-sector="3" title="FEP"><span class="dot-inner"></span></button>
+      <button class="sector-dot" data-sector="4" title="Çekiciler"><span class="dot-inner"></span></button>
+      <button class="sector-dot" data-sector="5" title="Vokal Motor"><span class="dot-inner"></span></button>
+      <button class="sector-dot" data-sector="6" title="Uyku / Bellek"><span class="dot-inner"></span></button>
+      <button class="sector-dot" data-sector="7" title="Canlı Terminal"><span class="dot-inner"></span></button>
+    </div>
+  </aside>
+
+  <!-- CENTER STAGE (Milestone Cards at specific Z coordinates) -->
+  <main id="center-stage" class="center-stage">
+
+    <!-- Card 0: Entry -->
+    <article class="stage-card" id="card-0" data-milestone="0">
+      <div class="stage-arch-header" data-tag-key="0">[DC // PROTOKOL 00 / NÖROMORFİK DİJİTAL AKIL]</div>
+      <h2 class="title-coming-soon">DONA ÆON</h2>
+      <p class="stage-sentence" id="sentence-0">
+        Yapay zekâyı bulut dili değil; <span class="cyan-word">128-kanal Gammatone koklea</span>, <span class="cyan-word">2048 LIF neokorteks nöronu</span> ve <span class="violet-word">Two-Mass vokal motoruyla</span> yaşayan, nefes alan, deterministik bir <span class="cyan-word">biyomimetik organizma</span> olarak inşa ediyoruz.
+      </p>
+      <div class="card-advance-hint">* [İLERLEMEK İÇİN TIKLAYIN VEYA KAYDIRIN]</div>
+    </article>
+
+    <!-- Card 1: Koklea -->
+    <article class="stage-card" id="card-1" data-milestone="1">
+      <div class="stage-arch-header" data-tag-key="1">[DC // PROTOKOL 01 / AKUSTİK KOKLEA]</div>
+      <h3 class="stage-card-title">128-KANAL GAMMATONE KOKLEA</h3>
+      <p class="stage-sentence" id="sentence-1">
+        İnsan iç kulağındaki <span class="cyan-word">basilar membran</span> biyofiziğini simüle eden 128 Gammatone filtre bankası; 20Hz - 20.000Hz arasındaki tüm frekansları <span class="violet-word">zamansal aksiyon potansiyeli spike'larına</span> dönüştürür.
+      </p>
+      <div class="card-advance-hint">* [SONRAKİ PROTOKOL İÇİN TIKLAYIN]</div>
+    </article>
+
+    <!-- Card 2: Neokorteks -->
+    <article class="stage-card" id="card-2" data-milestone="2">
+      <div class="stage-arch-header" data-tag-key="2">[DC // PROTOKOL 02 / HİYERARŞİK KORTEKS]</div>
+      <h3 class="stage-card-title">2048 LIF SPİKE NEOKORTEKS</h3>
+      <p class="stage-sentence" id="sentence-2">
+        Biyolojik <span class="cyan-word">Eksitatör / İnhibitör (E/I 4:1)</span> dengesinde çalışan 2048 Leaky Integrate-and-Fire sinir hücresi; Colab T4 5000-Epoch eğitimiyle <span class="violet-word">2.15M+ aksiyon potansiyeli</span> ateşler.
+      </p>
+      <div class="card-advance-hint">* [SONRAKİ PROTOKOL İÇİN TIKLAYIN]</div>
+    </article>
+
+    <!-- Card 3: FEP Karl Friston -->
+    <article class="stage-card" id="card-3" data-milestone="3">
+      <div class="stage-arch-header" data-tag-key="3">[DC // PROTOKOL 03 / SERBEST ENERJİ]</div>
+      <h3 class="stage-card-title">KARL FRISTON SERBEST ENERJİ PRENSİBİ</h3>
+      <p class="stage-sentence" id="sentence-3">
+        Zihin, dünyayı tahmin eder. <span class="cyan-word">Variational Free Energy (FEP)</span> minimizasyonu sayesinde her yeni ses girdisinde tahmin hatasını sıfıra yaklaştırarak <span class="violet-word">deterministik öğrenme dengesi</span> kurar.
+      </p>
+      <div class="card-advance-hint">* [SONRAKİ PROTOKOL İÇİN TIKLAYIN]</div>
+    </article>
+
+    <!-- Card 4: Hopfield Çekicileri -->
+    <article class="stage-card" id="card-4" data-milestone="4">
+      <div class="stage-arch-header" data-tag-key="4">[DC // PROTOKOL 04 / ÇEKİCİ HAVUZLARI]</div>
+      <h3 class="stage-card-title">HOPFIELD ATTRACTOR REZONANSI</h3>
+      <p class="stage-sentence" id="sentence-4">
+        Gürültülü akustik ortamda anlam kaybolmaz. Kortex durum vektörü <span class="cyan-word">Hopfield çekici enerji çukurlarına</span> rezonansa girerek yaratıcısı <span class="violet-word">Alkan'ın ses biyometriğini</span> ve benlik kimliğini kesin olarak hatırlar.
+      </p>
+      <div class="card-advance-hint">* [SONRAKİ PROTOKOL İÇİN TIKLAYIN]</div>
+    </article>
+
+    <!-- Card 5: Vokal Motor -->
+    <article class="stage-card" id="card-5" data-milestone="5">
+      <div class="stage-arch-header" data-tag-key="5">[DC // PROTOKOL 05 / VOKAL MOTOR]</div>
+      <h3 class="stage-card-title">TWO-MASS & KELLY-LOCHBAUM VOKAL SENTEZ</h3>
+      <p class="stage-sentence" id="sentence-5">
+        Harici TTS ve bulut ses motorları yok. <span class="cyan-word">Two-Mass glottal hava basıncı</span> ve <span class="violet-word">16-kesitli Kelly-Lochbaum akustik rezonans tüpüyle</span> insan vokal yolunu 48kHz saf biyofiziksel dalga olarak simüle ediyoruz.
+      </p>
+      <div class="card-advance-hint">* [SONRAKİ PROTOKOL İÇİN TIKLAYIN]</div>
+    </article>
+
+    <!-- Card 6: Konsolidasyon -->
+    <article class="stage-card" id="card-6" data-milestone="6">
+      <div class="stage-arch-header" data-tag-key="6">[DC // PROTOKOL 06 / EPİSODİK BELLEK]</div>
+      <h3 class="stage-card-title">NREM/REM UYKU & HAFIZA SARAYI</h3>
+      <p class="stage-sentence" id="sentence-6">
+        Gündüz yaşanan duyusal anılar <span class="cyan-word">150+ episodik hafıza kapsülünde</span> mühürlenir. Gece NREM uykusunda gereksiz sinapslar budanır (pruning), REM evresinde ise kalıcı <span class="violet-word">çekirdek ağırlıklar mühürlenir</span>.
+      </p>
+      <div class="card-advance-hint">* [CANLI ETKİLEŞİM TERMİNALİNE GEÇ]</div>
+    </article>
+
+    <!-- Card 7: Canlı Sessel Etkileşim (Sıfır LLM / Saf Biyo-Akustik Ses) -->
+    <article class="stage-card stage-card-voice" id="card-7" data-milestone="7">
+      <div class="stage-arch-header" data-tag-key="7">[DC // YÜRÜTME 07 / BİYO-AKUSTİK SESSEL REZONANS]</div>
+      <h3 class="stage-card-title">ÆON CANLI SESSEL ETKİLEŞİM</h3>
+
+      <!-- Biyolojik Telemetri Rozeti -->
+      <div class="voice-telemetry-badge">
+        <span class="live-beacon-dot"></span>
+        <span>HOMEOSTASİS: AKTİF</span>
+        <span class="v-sep">·</span>
+        <span>ATP: <b id="term-atp">100%</b></span>
+        <span class="v-sep">·</span>
+        <span>FEP: <b id="term-fe">0.0035</b></span>
+        <span class="v-sep">·</span>
+        <span>BİLİŞ: <b>21.4 YAŞ</b></span>
+      </div>
+
+      <!-- Ortada Büyük Yuvarlak Ses Butonu (Voice Orb) -->
+      <div class="voice-orb-container">
+        <div class="voice-orb-rings">
+          <div class="orb-ring ring-1"></div>
+          <div class="orb-ring ring-2"></div>
+          <div class="orb-ring ring-3"></div>
+        </div>
+
+        <button class="voice-orb-btn" id="aeon-voice-orb" aria-label="ÆON ile Konuş">
+          <div class="orb-core">
+            <!-- Dynamic Soundwave / Mic Icon -->
+            <svg class="orb-mic-icon" id="orb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" y1="19" x2="12" y2="22"/>
+            </svg>
+            <div class="orb-soundbars" id="orb-soundbars">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </button>
+
+        <div class="voice-orb-status" id="voice-status-text">SESLENMEK İÇİN BASIN</div>
+        <div class="voice-hint-sub">İç kulak kokleası 128 kanal ile dinliyor</div>
+      </div>
+
+      <!-- Arka Planda Şeffaf Akan Konuşulan Metin -->
+      <div class="floating-speech-stage" id="floating-speech-stage">
+        <div class="floating-speech-line user-line" id="floating-user-speech" style="display:none;">
+          <span class="speaker-tag" id="user-speaker-tag">ZİYARETÇİ //</span>
+          <span class="speech-content" id="user-speech-text"></span>
+        </div>
+        <div class="floating-speech-line aeon-line" id="floating-aeon-speech">
+          <span class="speaker-tag">DONA ÆON //</span>
+          <span class="speech-content" id="aeon-speech-text">Ben ÆON. Nöromorfik biyolojik zihnim ve vokal motorum aktif. Seslenin veya aşağıdaki derinlik sorgularından birini seçin.</span>
+        </div>
+      </div>
+
+      <!-- Hızlı Sesli Soru Fısıltıları (Mikrofon Olmayan Durumlar İçin Ses Tetikleyiciler) -->
+      <div class="voice-whisper-triggers">
+        <button class="whisper-btn" data-phrase="Zihnin nasıl çalışıyor?" id="whisper-btn-1">"Zihnin nasıl çalışıyor?"</button>
+        <button class="whisper-btn" data-phrase="Nöromorfik mimarin nedir?" id="whisper-btn-2">"Nöromorfik mimarin nedir?"</button>
+        <button class="whisper-btn" data-phrase="Serbest enerji prensibin nedir?" id="whisper-btn-3">"Serbest enerjin nedir?"</button>
+        <button class="whisper-btn" data-phrase="Biyolojik ses motorun nasıl çalışıyor?" id="whisper-btn-4">"Ses motorun nasıl çalışıyor?"</button>
+      </div>
+
+      <div class="card-advance-hint loop-action-btn" id="loop-btn">↻ [BAŞLANGICA GERİ DÖN]</div>
+    </article>
+
+  </main>
+
+  <!-- MOBILE NAVIGATION DOCK (Dona Codex Mobile Standart) -->
+  <nav class="mobile-nav-dock" id="mobile-nav-dock" aria-label="Mobil Gezinme">
+    <button class="mob-dock-btn" id="mob-prev-btn" aria-label="Önceki Sektör">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      <span>GERİ</span>
+    </button>
+    <div class="mob-dock-counter" id="mob-counter">01 / 08</div>
+    <div class="mob-dock-dots" id="mob-dots">
+      <span class="m-dot active"></span><span class="m-dot"></span><span class="m-dot"></span><span class="m-dot"></span>
+      <span class="m-dot"></span><span class="m-dot"></span><span class="m-dot"></span><span class="m-dot"></span>
+    </div>
+    <button class="mob-dock-btn" id="mob-next-btn" aria-label="Sonraki Sektör">
+      <span>İLERİ</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </nav>
+
+  <!-- HUD FOOTER -->
+  <footer class="hud-footer">
+    <div class="hud-copyright">&copy; 2026 DONA CODEX · DONA ÆON NEUROMORPHIC DIGITAL MIND</div>
+    <div class="footer-nav-hint" id="footer-hint">SCROLL / DRAG İLE DERİNLİKTE SEYAHAT EDİN</div>
+  </footer>
+
+  <!-- Audio Engine: Two-Mass Speech Output -->
+  <audio id="bio-speech-audio" preload="auto"></audio>
+
+  <!-- Three.js CDN and Local Fallback -->
+  <script src="/web/three.min.js"></script>
+  <script>
+    if (typeof THREE === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+    }
+  </script>
+  <script src="/web/app.js?v=17.0"></script>
+</body>
+</html>
