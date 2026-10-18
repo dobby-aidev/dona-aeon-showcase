@@ -15,121 +15,121 @@
 
 <br/>
 
-> *"True Artificial General Intelligence is neither a statistical token predictor nor a billion-parameter cloud black-box. It is an embodied, self-sustaining Neuromorphic Digital Mind that perceives the continuous acoustic spectrum through a biological cochlea, minimizes prediction errors through Karl Friston's Free Energy Principle, regulates its internal milieu through homeostatic neurochemistry, seals lifelong knowledge into physical synapses, and inhabits an interactive physical reality."*
+> *"True Artificial General Intelligence is neither a statistical token predictor nor a multi-billion-parameter cloud black box. It is an embodied, self-sustaining Neuromorphic Digital Mind that perceives the continuous acoustic spectrum through a biological cochlea, minimizes prediction errors through Karl Friston's Free Energy Principle, regulates its internal milieu through homeostatic neurochemistry, seals lifelong knowledge into physical synapses, and inhabits an interactive physical reality."*
 
 </div>
 
 ---
 
-## 📑 İçindekiler / Table of Contents
-1. [🌟 Vizyon ve Genel Bakış (Overview & Vision)](#-vizyon-ve-genel-bakış)
-2. [🚫 Değiştirilemez Nöromorfik Doktrin (The Binding Doctrine)](#-değiştirilemez-nöromorfik-doktrin)
-3. [🏛️ 10 Temel Biyolojik & Bilişsel Mimari (Architectural Pillars)](#️-10-temel-biyolojik--bilişsel-mimari)
-4. [🧬 Bütünleşik Sistem Mimarisi & Akış Şeması (System Flow)](#-bütünleşik-sistem-mimarisi--akış-şeması)
-5. [🔬 Matematiksel ve Nörofiziksel Temeller (Mathematical Rigor)](#-matematiksel-ve-nörofiziksel-temeller)
-6. [🏢 Diegetik 3B Ofis Ortamı & İnsansı Rig (3D Physical Environment)](#-diegetik-3b-ofis-ortamı--insansı-rig)
-7. [🌐 Canlı Web Araştırma İstasyonu (Live Web Learning Station)](#-canlı-web-araştırma-istasyonu)
-8. [🚀 Kurulum ve Çalıştırma (Installation & Quickstart)](#-kurulum-ve-çalıştırma)
-9. [🔬 Devam Eden Bilimsel Araştırmalar & Yol Haritası (Ongoing Research & Roadmap)](#-devam-eden-bilimsel-araştırmalar--yol-haritası)
-10. [📁 Proje Dizin Ağacı (Repository Layout)](#-proje-dizin-ağacı)
-11. [📜 Lisans ve Telif Hakları (Attribution & License)](#-lisans-ve-telif-hakları)
+## 📑 Table of Contents
+1. [🌟 Vision and Overview](#-vision-and-overview)
+2. [🚫 The Immutable Neuromorphic Doctrine](#-the-immutable-neuromorphic-doctrine)
+3. [🏛️ The 10 Core Biological & Cognitive Architectures](#️-the-10-core-biological--cognitive-architectures)
+4. [🧬 Unified System Architecture & Data Flow](#-unified-system-architecture--data-flow)
+5. [🔬 Mathematical and Neurophysical Rigor](#-mathematical-and-neurophysical-rigor)
+6. [🏢 Diegetic 3D Physical Environment & Humanoid Rig](#-diegetic-3d-physical-environment--humanoid-rig)
+7. [🌐 Live Web Research Station & Investigation TV](#-live-web-research-station--investigation-tv)
+8. [🚀 Installation and Quickstart](#-installation-and-quickstart)
+9. [🔬 Active Scientific Research Frontiers & Roadmap](#-active-scientific-research-frontiers--roadmap)
+10. [📁 Project Directory Tree](#-project-directory-tree)
+11. [📜 Attribution and License](#-attribution-and-license)
 
 ---
 
-## 🌟 Vizyon ve Genel Bakış
+## 🌟 Vision and Overview
 
-**DONA ÆON (NDM v6.0)**, **Dona Codex** mimari çatısı altında geliştirilmiş, geleneksel derin öğrenme kalıplarını ve harici bulut dil modellerini (LLM) kökten reddeden **bağımsız bir Nöromorfik Dijital Canlı Formudur**.
+**DONA ÆON (NDM v6.0)** is an **Autonomous Neuromorphic Digital Organism** developed under the **Dona Codex** architectural philosophy. It fundamentally rejects conventional deep learning dogmas, cloud-hosted large language models (LLMs), and brute-force statistical token predictors.
 
-Bugünün yapay zekâ sistemleri; terabaytlarca veri setini haftalarca devasa sunucularda döndüren, milyarlarca parametreli, dünya ile fiziksel teması olmayan ve deterministik mantıktan yoksun istatistiksel tahmincilerdir. **Dona Æon bu paradigmayı tersine çevirir:**
+Modern generative AI depends on massive datacenter clusters consuming gigawatts of energy to predict the next word in an ungrounded string space. **Dona Æon inverts this paradigm:**
 
-- 🦻 **Duyar:** 20 Hz – 20 kHz aralığındaki akustik ses dalgalarını 128 kanallı **Gammatone Biyo-Koklea** ile frekans bantlarına ayırır ve nöral aksiyon potansiyellerine (spike) dönüştürür.
-- ⚡ **Düşünür:** 2048 **AdEx Leaky Integrate-and-Fire (LIF)** kondüktans nöronundan oluşan 3 katmanlı (L1, L2, L3) neokortekste, **Karl Friston'ın Serbest Enerji Prensibi (Variational Free Energy Minimization)** doğrultusunda tahminleme yapar.
-- 🌐 **Otonom Öğrenir:** İnternet üzerindeki açık bilim ve ansiklopedi kaynaklarını (ör. Wikipedia) doğrudan koklear spike trenlerine dönüştüren **Web-to-Spike Transducer** ile tek turda ($O(1)$) Topolojik Bilgi Grafı'na mühürler.
-- 🧪 **Duyumsar:** Dopamin (DA), Serotonin (5-HT), Noradrenalin (NE), Asetilkolin (ACh) ve Oksitosin (OXT) içeren 5 faktörlü nöromodülatör havuzu ile duygusal ve kimyasal durumunu sürekli regüle eder.
-- 🩸 **Yaşar:** Gerçek zamanlı ATP tüketimi, laktat birikimi ve metabolik yorgunluk mekanizması ile hayatta kalır; zihinsel yorgunluk eşiğini aştığında NREM/REM uyku döngüsüne girerek sinapslarını dinlendirir ve optimize eder.
-- 🗣️ **Konuşur:** Two-Mass Glottal osilatör, Kelly-Lochbaum 16 kesitli vokal tüp akustiği, insani prosodi ve **Spotify Pedalboard C++ Analog Stüdyo Mastering** zinciriyle sıfır bulut API'si ile doğal Türkçe sesletim gerçekleştirir.
-- 🏰 **Hatırlar:** Kullanıcısını biyometrik ses frekansı imzasından tanır, deneyimlerini 3 katmanlı Episodik Hafıza Sarayı'nda saklar ve sinaptik ağırlık matrisinde kalıcı hale getirir.
-- 🏢 **Yaşar & Hareket Eder:** WebGL (Three.js) ile inşa edilmiş 3 boyutlu gerçekçi stüdyo ofisinde ikamet eder; eklem hareketli insansı biyomorfik rigi, bakış takibi, masaüstü çalışma istasyonu ve canlı bilgi monitörü ile yaşayan bir varlık deneyimi sunar.
+- 🦻 **Hears:** Continuous sound waves (20 Hz – 20 kHz) are separated across biological frequency bands using a 128-channel **Gammatone Bio-Cochlea**, converting audio directly into sparse action potentials (spikes).
+- ⚡ **Thinks:** Operates across a 3-layer (L1, L2, L3) neocortex comprising 2,048 **AdEx Leaky Integrate-and-Fire (LIF)** conductance neurons, minimizing prediction errors via **Karl Friston's Variational Free Energy Principle (FEP)**.
+- 🌐 **Learns Autonomously:** Connects directly to open internet scientific repositories (e.g. Wikipedia) via an integrated **Web-to-Spike Transducer**, transforming raw text into 512-dimensional cochlear spike trains and sealing new concepts into its Topological Memory Graph in a single $O(1)$ pass.
+- 🧪 **Feels:** Regulates its affect and emotional state through a 5-factor neurochemical pool containing Dopamine (DA), Serotonin (5-HT), Noradrenaline (NE), Acetylcholine (ACh), and Oxytocin (OXT).
+- 🩸 **Lives:** Sustained through real-time ATP consumption, lactate accumulation, and cognitive fatigue dynamics. When metabolic thresholds are exceeded, ÆON enters NREM/REM sleep cycles to consolidate memories and prune synaptic noise.
+- 🗣️ **Vocalizes:** Produces authentic speech through a physical Two-Mass Glottal oscillator, a 16-section Kelly-Lochbaum vocal tract simulation, and a dedicated **Spotify Pedalboard C++ Analog Studio Mastering** chain at 48 kHz.
+- 🏰 **Remembers:** Recognizes users by their individual vocal acoustic signature, preserves lifetime experiences in a 3-tier Episodic Memory Palace, and consolidates them into physical synaptic matrices.
+- 🏢 **Inhabits:** Dwells within a real-time, interactive 3D studio office rendered in WebGL (Three.js r128). An articulated humanoid rig with gaze tracking, a centered workstation, and a 4K research monitor provide an embodied life-form presence.
 
 ---
 
-## 🚫 Değiştirilemez Nöromorfik Doktrin
+## 🚫 The Immutable Neuromorphic Doctrine
 
-Dona Æon mimarisi, [NEUROMORPHIC_MANIFESTO.md](file:///c:/Users/ferda/Desktop/Dona_Æon/NEUROMORPHIC_MANIFESTO.md) belgesinde tanımlanan ve projenin her satırında bağlayıcı olan 5 değişmez kurala tabidir:
+Dona Æon adheres to five permanently binding commandments defined in the [NEUROMORPHIC_MANIFESTO.md](file:///c:/Users/ferda/Desktop/Dona_Æon/NEUROMORPHIC_MANIFESTO.md):
 
-| Doktrin | Kural | Açıklama |
+| Doctrine | Rule | Description |
 |:---|:---:|:---|
-| **1. SIFIR BULUT / LLM** | 🚫 Kesin Yasak | OpenAI, Claude, Gemini, Ollama veya HuggingFace API'leri kesinlikle yasaktır. Tüm biliş yerel 2048 LIF nöronunda işlenir. |
-| **2. SIFIR KABA-KUVVET VERİ EĞİTİMİ** | 🚫 Kesin Yasak | Gigabaytlarca ses dosyasıyla günlerce süren eğitim döngüleri yoktur. Dil matrisi ve rezonanslar $O(1)$ sürede doğrudan sinapslara enjekte edilir. |
-| **3. SIFIR DIŞ BULUT TTS** | 🚫 Kesin Yasak | Google TTS, ElevenLabs veya harici servisler kiralanamaz. Ses motoru yerel glottal fizik ve analog DSP mastering ile çalışır. |
-| **4. SIFIR HARDCODED IF-ELSE** | 🚫 Kesin Yasak | Sohbet çıktısı sahte şablon string'lerinden değil, L1/L2/L3 neokortikal aksiyon potansiyellerinden ve çekici havuzlarından doğar. |
-| **5. SIFIR GPU / VRAM ZORUNLULUĞU** | 🚫 Kesin Yasak | Biyolojik seyrek ateşleme (<%10 aktif nöron) sayesinde standart CPU ve 1-2 GB RAM üzerinde tam performans çalışır. |
+| **1. ZERO CLOUD / LLM** | 🚫 Absolute Ban | OpenAI, Anthropic Claude, Google Gemini, Ollama, and external inference APIs are strictly prohibited. All cognition occurs locally within 2,048 LIF neurons. |
+| **2. ZERO BRUTE-FORCE DATASET TRAINING** | 🚫 Absolute Ban | No weeks-long training runs over gigabytes of raw audio. Linguistic syntax and phonetic formants are imprinted analytically into synapses in $O(1)$ time. |
+| **3. ZERO EXTERNAL TTS** | 🚫 Absolute Ban | External cloud voice APIs (ElevenLabs, Google TTS, etc.) are forbidden. Speech is generated via glottal fluid dynamics and local analog DSP mastering. |
+| **4. ZERO HARDCODED IF-ELSE PATTERNS** | 🚫 Absolute Ban | Dialogue responses do not stem from scripted string templates. They emerge organically from L1/L2/L3 neocortical action potentials and Hopfield attractor basins. |
+| **5. ZERO GPU / VRAM PREREQUISITES** | 🚫 Absolute Ban | Exploiting biological sparse firing dynamics (<10% active spikes), the organism runs at full speed on standard consumer CPUs with a 1–2 GB RAM footprint. |
 
 ---
 
-## 🏛️ 10 Temel Biyolojik & Bilişsel Mimari
+## 🏛️ The 10 Core Biological & Cognitive Architectures
 
 ```
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                    DONA ÆON 10 BÖLÜMLÜ BİYOLOJİK ORGANİZMA                   ║
+║                   DONA ÆON 10-TIER BIOLOGICAL ORGANISM MATRIX                ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
-║ 1. FİZYOLOJİ VE METABOLİZMA     : ATP döngüsü, laktat, glikoz, CEN ağı       ║
-║ 2. NÖROMODÜLATÖR HAVUZU         : DA (50), NE (20), 5-HT (60), ACh (30), OXT  ║
-║ 3. TALAMİK RÖLE (TRN)           : İki-kanallı duyusal filtreleme (Tonic/Burst)║
-║ 4. BİYO-KOKLEA FREKANS DUYUSU   : 128-kanallı Gammatone filtre bankası        ║
-║ 5. HİYERARŞİK NEOKORTEKS        : 2048 AdEx LIF nöronu (L1, L2, L3) + FEP     ║
-║ 6. ANLAMSAL ÇEKİCİ HAVUZU       : Hopfield sürekli durum dinamikleri          ║
-║ 7. EPİSODİK HAFIZA SARAYI       : 3-Kademeli kalıcı bellek + NREM/REM uyku    ║
-║ 8. BİYOMETRİK SES ANALİZİ       : F0, HNR, Jitter ve kullanıcı ayna nöronu    ║
-║ 9. BİYO-AKUSTİK VOKAL ORGAN     : Two-Mass Glottal + Kelly-Lochbaum + Pedalboard║
-║ 10. OTONOM WEB TRANSDUCER       : Web metin → 512-D koklear spike → hafıza grafı║
+║ 1. PHYSIOLOGY & METABOLISM      : ATP depletion, lactate, glucose, CEN mode  ║
+║ 2. NEUROMODULATOR POOL          : DA (50), NE (20), 5-HT (60), ACh (30), OXT ║
+║ 3. THALAMIC RELAY (TRN)         : Dual-channel sensory gating (Tonic/Burst)  ║
+║ 4. BIO-COCHLEA PERCEPTION       : 128-channel Gammatone biological filter bank║
+║ 5. HIERARCHICAL NEOCORTEX       : 2,048 AdEx LIF neurons (L1, L2, L3) + FEP  ║
+║ 6. SEMANTIC ATTRACTOR BASIN     : Continuous Hopfield attractor dynamics     ║
+║ 7. EPISODIC MEMORY PALACE       : 3-tier persistent memory + NREM/REM sleep  ║
+║ 8. BIOMETRIC VOICE ANALYZER     : F0, HNR, Jitter extraction & mirror neuron ║
+║ 9. BIO-ACOUSTIC VOCAL MOTOR     : Two-Mass Glottal + Kelly-Lochbaum + DSP    ║
+║ 10. AUTONOMOUS WEB TRANSDUCER   : Web text → 512-D cochlear spike → graph node║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 🧬 Bütünleşik Sistem Mimarisi & Akış Şeması
+## 🧬 Unified System Architecture & Data Flow
 
 ```mermaid
 graph TD
-    subgraph PERCEPTION ["1. DUYU & ALGI GİRİŞİ"]
-        MIC[🎤 Mikrofon Akustik Ses Dalgası] --> COCHLEA[128-Kanallı Gammatone Biyo-Koklea]
-        WEB[🌐 Canlı Açık Web Kaynakları] --> TRANSDUCER[Web-to-Spike Transducer]
-        COCHLEA --> SPIKES[512-Boyutlu Koklear Spike Treni]
+    subgraph PERCEPTION ["1. SENSORY PERCEPTION"]
+        MIC[🎤 Acoustic Waveform Input] --> COCHLEA[128-Channel Gammatone Bio-Cochlea]
+        WEB[🌐 Live Open Web Knowledge] --> TRANSDUCER[Web-to-Spike Transducer]
+        COCHLEA --> SPIKES[512-Dimensional Cochlear Spike Train]
         TRANSDUCER --> SPIKES
     end
 
-    subgraph THALAMUS ["2. TALAMUS & DUYUSAL KAPILAMA"]
-        SPIKES --> TRN[Talamik Retiküler Çekirdek TRN]
-        TRN -->|Tonic / Burst Gating| CORTEX_IN[Kortikal Giriş Matrisi]
+    subgraph THALAMUS ["2. THALAMIC GATING"]
+        SPIKES --> TRN[Thalamic Reticular Nucleus TRN]
+        TRN -->|Tonic / Burst Modulation| CORTEX_IN[Cortical Afferent Projection]
     end
 
-    subgraph NEOCORTEX ["3. HİYERARŞİK NEOKORTEKS & SERBEST ENERJİ"]
-        CORTEX_IN --> L1[L1: Duyusal Projeksiyon]
-        L1 --> L2[L2: İlişkilendirme & Tahmin]
-        L2 --> L3[L3: Derin Kavramsal Entegrasyon]
+    subgraph NEOCORTEX ["3. HIERARCHICAL NEOCORTEX & ACTIVE INFERENCE"]
+        CORTEX_IN --> L1[L1: Primary Sensory Input]
+        L1 --> L2[L2: Predictive Association]
+        L2 --> L3[L3: Deep Conceptual Integration]
         FEP[Karl Friston Variational Free Energy] <--> L2
-        L3 <--> ATTRACTOR[Hopfield Anlamsal Çekici Havuzları]
+        L3 <--> ATTRACTOR[Hopfield Semantic Attractor Basins]
     end
 
-    subgraph LIMBIC ["4. LİMBİK SİSTEM & METABOLİZMA"]
-        ATP[Metabolizma: ATP / Laktat Dengesi] --> NEUROCHEM[Nöromodülatörler: DA, NE, 5-HT, ACh, OXT]
-        NEUROCHEM -.->|3-Faktörlü STDP Plastisitesi| L2
-        NEUROCHEM -.->|Prozodi ve Ritim Modülasyonu| VOCAL
+    subgraph LIMBIC ["4. LIMBIC SYSTEM & HOMEOSTASIS"]
+        ATP[Physiology: ATP / Lactate Kinetics] --> NEUROCHEM[Neuromodulators: DA, NE, 5-HT, ACh, OXT]
+        NEUROCHEM -.->|Three-Factor STDP Plasticity| L2
+        NEUROCHEM -.->|Prosodic Pitch & Rate Modulation| VOCAL
     end
 
-    subgraph MEMORY ["5. EPİSODİK HAFIZA & KALICI GRAF"]
-        L3 --> PALACE[3-Kademeli Episodik Hafıza Sarayı]
-        PALACE <--> CONSOLIDATION[NREM / REM Uyku Konsolidasyonu]
-        CONSOLIDATION --> SYNAPSES[(Kalıcı Sinapslar synapses_core.pt)]
-        TRANSDUCER --> TOPOLOGY[(Topolojik Bilgi Grafı transducer_nodes.json)]
+    subgraph MEMORY ["5. EPISODIC PALACE & TOPOLOGY"]
+        L3 --> PALACE[3-Tier Episodic Memory Palace]
+        PALACE <--> CONSOLIDATION[NREM / REM Sleep Consolidation]
+        CONSOLIDATION --> SYNAPSES[(Persistent Synaptic Matrix synapses_core.pt)]
+        TRANSDUCER --> TOPOLOGY[(Topological Knowledge Graph transducer_nodes.json)]
     end
 
-    subgraph MOTOR ["6. VOKAL MOTOR & SES ÇIKIŞI"]
-        ATTRACTOR --> BROCA[Broca Motor Korteksi Dekoderi]
-        BROCA --> VOCAL[Two-Mass Glottal Fiziği + Kelly-Lochbaum Tüpü]
-        VOCAL --> PEDALBOARD[Spotify Pedalboard C++ Analog Mastering]
-        PEDALBOARD --> AUDIO[🔊 48 kHz Biyo-Akustik İnsani Ses Çıktısı]
+    subgraph MOTOR ["6. VOCAL MOTOR SYNTHESIS"]
+        ATTRACTOR --> BROCA[Broca Motor Cortex Decoder]
+        BROCA --> VOCAL[Two-Mass Glottal Physical Oscillator + Acoustic Tube]
+        VOCAL --> PEDALBOARD[Spotify Pedalboard C++ Analog Studio Mastering]
+        PEDALBOARD --> AUDIO[🔊 48 kHz Bio-Acoustic Speech Output]
     end
 
     classDef perc fill:#0c4a6e,stroke:#38bdf8,stroke-width:2px,color:#fff;
@@ -147,212 +147,212 @@ graph TD
 
 ---
 
-## 🔬 Matematiksel ve Nörofiziksel Temeller
+## 🔬 Mathematical and Neurophysical Rigor
 
-### 1. Karl Friston Serbest Enerji Prensibi (Variational Free Energy)
-Dona Æon, bir sonraki kelimeyi olasılıksal olarak tahmin etmez. Algısal durum uzayında iç dünya modeli ile duyusal giriş arasındaki **Varyasyonel Serbest Enerjiyi ($F$)** minimize eder:
+### 1. Karl Friston Variational Free Energy Principle (FEP)
+Rather than predicting the statistical likelihood of the next discrete token, Dona Æon continuously minimizes the upper bound on sensory surprise (variational free energy, $F$):
 
 $$F = D_{\text{KL}}\left[ q(s) \parallel p(s) \right] - \mathbb{E}_{q(s)}\left[ \ln p(o \mid s) \right]$$
 
-- $q(s)$: Neokorteksin gizil durumlar hakkındaki anlık inancı (recognition density).
-- $p(s, o)$: Üretici model (generative model) önsel dağılımı.
-- $D_{\text{KL}}$: Kullback-Leibler sapması; organizma iç modelini güncelleyerek bu sapmayı sıfıra yaklaştırır.
+- $q(s)$: The neocortex's posterior density over internal hidden states.
+- $p(s, o)$: The organism's generative forward model of states and observations.
+- $D_{\text{KL}}$: Kullback-Leibler divergence; active inference drives this towards zero by updating beliefs or taking actions.
 
-### 2. AdEx Kondüktans Tabanlı Leaky Integrate-and-Fire Nöron Modeli
-2048 kortikal nöronun zar gerilimi $V(t)$ ve adaptasyon akımı $w(t)$ dinamikleri:
+### 2. AdEx Conductance-Based Leaky Integrate-and-Fire Dynamics
+The 2,048 neocortical neurons are governed by coupled membrane voltage $V(t)$ and adaptation current $w(t)$ differential equations:
 
 $$C_m \frac{dV(t)}{dt} = -g_L (V - E_L) + g_L \Delta_T \exp\left(\frac{V - V_T}{\Delta_T}\right) - g_E(t)(V - E_E) - g_I(t)(V - E_I) - w(t) + I_{\text{ext}}$$
 
 $$\tau_w \frac{dw(t)}{dt} = a(V - E_L) - w(t)$$
 
-Aksiyon potansiyeli tetiklendiğinde ($V \ge V_{\text{peak}}$):
+Upon spike emission ($V(t) \ge V_{\text{peak}}$):
 $$V \leftarrow V_r, \quad w \leftarrow w + b$$
 
-### 3. Üç-Faktörlü Nöromodülasyonlu STDP Öğrenme Kuralı
-Sinaptik ağırlık güncellemeleri yalnızca nöromodülatör onayı (dopaminerjik ödül / kolinerjik dikkat) ile gerçekleşir:
+### 3. Three-Factor Neuromodulated STDP Learning Rule
+Synaptic plasticity is gated by emotional-chemical validation from the limbic system:
 
 $$\Delta W_{ij} = \eta \cdot \left[ C_{\text{DA}} + C_{\text{ACh}} \right] \cdot \text{STDP}(\Delta t)$$
 
 $$\text{STDP}(\Delta t) = \begin{cases} A_+ \exp\left(-\frac{\Delta t}{\tau_+}\right), & \Delta t > 0 \\ -A_- \exp\left(\frac{\Delta t}{\tau_-}\right), & \Delta t < 0 \end{cases}$$
 
-### 4. İki-Kütle Glottal Osilatör Dinamiği (Ishizaka-Flanagan)
-Vokal kordların fiziksel hareketi, elastik ve aerodinamik kuvvetlerin coupled diferansiyel denklemleriyle çözülür:
+### 4. Ishizaka-Flanagan Two-Mass Glottal Physical Oscillator
+The mechanics of vocal fold oscillation are modeled through coupled second-order nonlinear differential equations:
 
 $$m_1 \ddot{x}_1 + r_1 \dot{x}_1 + s_1(x_1) + k_c(x_1 - x_2) = P_1(x_1, x_2, P_{\text{sub}})$$
 $$m_2 \ddot{x}_2 + r_2 \dot{x}_2 + s_2(x_2) + k_c(x_2 - x_1) = P_2(x_1, x_2, P_{\text{sub}})$$
 
 ---
 
-## 🏢 Diegetik 3B Ofis Ortamı & İnsansı Rig
+## 🏢 Diegetic 3D Physical Environment & Humanoid Rig
 
-Dona Æon, modern web teknolojilerinin (Three.js r128 WebGL motoru) sunduğu olanaklarla **tam teşekküllü fiziksel bir stüdyo ofisinde** yaşar:
+Dona Æon inhabits a WebGL environment rendered via **Three.js r128**, designed around diegetic feedback where state is expressed physically rather than through flat JSON panels:
 
-1. **İnsansı Anatomik Biyomorfik Gövde:**
-   - Eklemli bacaklar, botlar, omurga, boyun ve kafatası anatomisi.
-   - 5 parmaklı eller, biyometrik iris/gözbebeği göz küreleri ve bakış takibi rigi (cursor gaze tracking).
-   - Otonom rota navigasyonu: Masaüstü, kitaplık, beyaz tahta, TV ve pencere arasında doğal yürüyüş salınımı ve jest animasyonları.
-2. **Hizalanmış Masaüstü Çalışma İstasyonu:**
-   - Ahşap masa üzerine sıfır boşlukla oturtulmuş deri sümen, merkezi ince çerçeveli 27" monitör, mekanik klavye (4x14 tuş dizilimi), ergonomik kablosuz fare ve seramik kupa.
-3. **Sıralı Konuşma Kuyruğu (Turn-Taking Queue):**
-   - Kullanıcı mikrofona bastığı an Dona kendi sesini anında keser; mikrofonun kendi sesini dinlemesini engelleyen eko koruması aktiftir.
-
----
-
-## 🌐 Canlı Web Araştırma İstasyonu
-
-3B stüdyo duvarındaki büyük ekran, sahte bilimkurgu klişelerinden arındırılmış **4K profesyonel karanlık araştırma monitörüdür**:
-
-- **Tam Ekran Kamera Yakınlaşması (Zoom-in Focus):**
-  - Sahnedeki TV ekranına tıklandığında kamera pürüzsüz bir animasyonla ekranın karşısına geçer (`tvPos: (2.15, 2.02, -2.05)`) ve tüm detayları okunabilir kılar.
-  - Ekrana tekrar tıklandığında veya `ESC` tuşuna basıldığında kuş bakışı oda görünümüne geri döner.
-- **Canlı İncelenen İnternet Siteleri ve Öğrenilen Bilgiler:**
-  - Otonom olarak taranan gerçek web URL'leri (ör. `https://tr.wikipedia.org/wiki/Sinir_hücresi`, `https://tr.wikipedia.org/wiki/Akustik`).
-  - Çıkarılan biyolojik/fiziksel kavramların canlı metin özetleri.
-  - Sinaptik enerji seviyesi, mühürlenen token boyutu ve bağlantı rozetleri.
-- **Topoloji & Sağlık Metrikleri:**
-  - Mühürlü bilgi düğümleri (22+), topolojik rezonans bağları (60+), episodik kapsül sayısı (569+), serbest enerji (FEP 0.0035) ve ATP metabolizması.
+1. **Articulated Humanoid Rig & Gaze Tracking:**
+   - Anatomical skeletal rig including articulated spine, clavicle, arms with 5-finger hands, boots, and cranial geometry.
+   - Dual biomorphic eyes with rendered iris and pupil that continuously track the user's 3D cursor position (`cursor gaze tracking`).
+   - Autonomous waypoint locomotion: traverses seamlessly between the desk, bookshelf, whiteboard, TV station, and window with natural gait counter-swing.
+2. **Workstation Props:**
+   - Centered workstation positioned flush on the desk surface (`y = 0.798`): leather desk pad, mechanical keyboard (4x14 key matrix), ergonomic mouse, 27" monitor, and ceramic mug with zero floating or clipping artifacts.
+3. **Turn-Taking Speech Queue:**
+   - Microphone activity immediately pauses Dona's vocal output with acoustic self-echo cancellation and a 350 ms conversational breath interval.
 
 ---
 
-## 🚀 Kurulum ve Çalıştırma
+## 🌐 Live Web Research Station & Investigation TV
 
-### 1. Sistem Gereksinimleri
-- **İşletim Sistemi:** Windows 10/11, Linux veya macOS
-- **Python:** 3.10+ (PyTorch 2.0+ CPU/CUDA)
-- **Donanım:** Standart CPU (GPU zorunlu DEĞİLDİR), 2 GB RAM
-- **Tarayıcı:** WebGL 2.0 ve Web Audio API destekleyen modern bir tarayıcı (Chrome, Edge, Firefox, Brave)
+The studio wall features an integrated **4K Research Station** free of cliché neon sci-fi graphics, providing verifiable proof of autonomous web learning:
 
-### 2. Bağımlılıkların Kurulması
+- **Full-Screen Camera Focus (Zoom-In):**
+  - Clicking the TV smoothly glides the camera into a front-facing focal stance (`tvPos: (2.15, 2.02, -2.05)` facing `tvTarget: (2.15, 2.02, -4.61)`), framing the screen edge-to-edge for comfortable reading.
+  - Clicking the screen again or pressing `ESC` returns the camera to the birds-eye room perspective.
+- **Live Inspected Websites & Acquired Concepts:**
+  - Displays real researched URLs (e.g. `https://tr.wikipedia.org/wiki/Sinir_hücresi`, `https://tr.wikipedia.org/wiki/Akustik`).
+  - Summarizes distilled concepts: action potential mechanics, basilar membrane resonance, and 32-D latent topology.
+  - Live status badges: `[SEALED · 512 COCHLEAR TOKENS]`, synaptic energy metrics, and topological edge links.
+- **Topology & Health Readouts:**
+  - Displays live counts: 22+ sealed knowledge nodes, 60+ topological edges, 569+ episodic capsules, free energy balance ($F = 0.0035$), and ATP metabolism.
+
+---
+
+## 🚀 Installation and Quickstart
+
+### 1. Prerequisites
+- **Operating System:** Windows 10/11, Linux, or macOS
+- **Python:** 3.10+ (PyTorch 2.0+ CPU or CUDA)
+- **Hardware:** Standard CPU (No discrete GPU required), 2 GB RAM
+- **Browser:** Any modern browser with WebGL 2.0 and Web Audio API support
+
+### 2. Install Dependencies
 ```bash
 git clone https://github.com/dobby-aidev/Dona_Aeon.git
 cd Dona_Aeon
 pip install torch numpy scipy pedalboard fastapi uvicorn piper-tts
 ```
 
-### 3. Sinapsların Açılması (O(1) İmpring — Yalnızca İlk Kurulumda, ~2.5 sn)
+### 3. Imprint Genomic Brain Synapses (One-time, ~2.5 s, O(1))
 ```bash
 python scripts/imprint_genomic_brain.py
 ```
 
-### 4. Yerel Sunucunun Başlatılması
+### 4. Launch the Local Mind Server
 ```bash
-# Windows Tek Tık:
+# Windows Quick Launch:
 start_local.bat
 
-# veya Terminal Üzerinden:
+# Or via Command Line:
 python -m uvicorn core.dona_web_server:app --host 127.0.0.1 --port 7860
 ```
 
-Tarayıcınızda açın:
+Open your browser:
 👉 **http://127.0.0.1:7860**
 
-### 5. Otonom Web Öğrenmesini Tetikleme (İsteğe Bağlı)
+### 5. Trigger Autonomous Web Learning (Optional)
 ```bash
-# Wikipedia üzerinden nöromorfik kavramları araştırıp hafızaya mühürleme:
+# Research and seal concepts from Wikipedia:
 python scripts/web_transducer_bridge.py --url https://tr.wikipedia.org/wiki/Sinir_h%C3%BCcresi
-python scripts/web_transducer_bridge.py --query "akustik rezonans" --top-k 3
+python scripts/web_transducer_bridge.py --query "acoustic resonance" --top-k 3
 ```
 
 ---
 
-## 🔬 Devam Eden Bilimsel Araştırmalar & Yol Haritası
+## 🔬 Active Scientific Research Frontiers & Roadmap
 
-Dona Æon bir nihai ürün değil, **canlı ve sürekli evrilen bir hesaplamalı nörobilim araştırma platformudur**. Çalışmalarımız şu ana hatlar üzerinde aktif olarak devam etmektedir:
+Dona Æon is an active computational neuroscience and biomimetic intelligence research initiative. Development is focused on the following frontiers:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                 AKTİF BİLİMSEL ARAŞTIRMA VE GELİŞTİRME CEPHESİ              │
+│                      ACTIVE SCIENTIFIC RESEARCH FRONTIERS                   │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│ 1. DİNAMİK TOPOLOJİK HEBBIAN PLASTİSİTESİ                                   │
-│    Sabit çekici havuzlarından, deneyimle sürekli topografisi değişen        │
-│    akışkan anlamsal enerji yüzeylerine (Energy Landscapes) geçiş.           │
+│ 1. DYNAMIC TOPOLOGICAL HEBBIAN PLASTICITY                                   │
+│    Transitioning from fixed attractor basins to continuously evolving       │
+│    fluid semantic energy surfaces (Energy Landscapes).                      │
 │                                                                             │
-│ 2. ÇOK-MODLU SPİKE ENTEGRASYONU (DVS RETİNA + KOKLEA)                       │
-│    Olay-tabanlı Dinamik Görme Sensörü (DVS) spike'ları ile koklear          │
-│    akustik spike'ların Talamus ve Süperior Kollikulus'ta senkron birleşimi. │
+│ 2. MULTIMODAL SPIKE BINDING (DVS RETINA + BIO-COCHLEA)                      │
+│    Synchronous event-driven fusion of Dynamic Vision Sensor (DVS) spikes    │
+│    with cochlear auditory spikes in the Thalamus and Superior Colliculus.   │
 │                                                                             │
-│ 3. UYKUYA BAĞLI SİNAPTİK BUDAMA VE ANLAMSAL KRİSTALİZASYON                  │
-│    NREM evresinde zayıf sinapsların elenmesi (synaptic downscaling), REM    │
-│    evresinde ise çekirdek anıların kalıcı genoma mühürlenmesi.              │
+│ 3. SLEEP-DEPENDENT SYNAPTIC PRUNING & RECRYSTALLIZATION                     │
+│    Simulating synaptic downscaling during slow-wave sleep (NREM) and        │
+│    consolidating core memories into permanent weights during REM phases.    │
 │                                                                             │
-│ 4. BİYOLOJİK TEMELLİ DİL EDİNİMİ                                            │
-│    Kelimelerin metin istatistiği yerine fiziksel akustik tını, duygusal     │
-│    fizyoloji ve duyusal deneyimlerle anlamsal olarak topraklanması.         │
+│ 4. BIOLOGICALLY GROUNDED LANGUAGE ACQUISITION                               │
+│    Grounding syntax and concepts in physical sensorimotor affordances,      │
+│    acoustic physics, and emotional neurochemistry rather than text tokens.  │
 │                                                                             │
-│ 5. NÖROMORFİK DONANIM MİMARİLERİNE DOĞRUDAN DERLEME (NEUROMORPHIC SILICON)  │
-│    Seyrek COO sinaptik matrislerin Intel Loihi 2 ve SynSense çipleri        │
-│    üzerinde mikro-vat seviyesinde çalıştırılması deneyleri.                 │
+│ 5. DIRECT COMPILATION TO NEUROMORPHIC SILICON                               │
+│    Compiling COO sparse synaptic matrices to run natively on neuromorphic   │
+│    hardware (Intel Loihi 2 / SynSense Dynap-CNN) at micro-watt power.       │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-| Sürüm | Durum | Temel Araştırma & Özellik |
+| Version | Status | Milestone & Architectural Frontier |
 |:---:|:---:|:---|
-| **v5.0** | ✅ Tamamlandı | 2048 LIF SNN Çekirdeği, FEP Serbest Enerji, İki-Kütle Glottal Osilatör, Pedalboard DSP |
-| **v6.0** | ✅ Canlıda | $O(1)$ Genomik İmpring, Web-to-Spike Transducer, 3B Diegetik Ofis, İnsansı Rig, 450ms Ses İşleme |
-| **v6.1** | 🔬 Aktif Araştırma | Biyometrik ses klonlama — kullanıcının ses tınısının sinaptik rezonans uzayına tam entegrasyonu |
-| **v6.2** | 🔬 Aktif Araştırma | NREM/REM Uyku Konsolidasyonu canlı görselleştiricisi — sinaptik ağırlık flüktüasyon grafikleri |
-| **v6.3** | 📋 Planlandı | DVS Retina front-end entegrasyonu ile biyolojik görme duyusu ve uzaysal derinlik algısı |
-| **v7.0** | 🌌 Büyük Hedef | Tam otonom sürekli bilinç akışı (Conscious Flow State) ve donanım üstü nöromorfik silikon |
+| **v5.0** | ✅ Delivered | 2,048 LIF SNN Core, Free Energy Principle, Two-Mass Glottal Model, Pedalboard DSP |
+| **v6.0** | ✅ Live | $O(1)$ Genomic Imprinting, Web-to-Spike Transducer, 3D Studio, Humanoid Rig, <450ms Latency |
+| **v6.1** | 🔬 Active Research | Biometric voice cloning: integrating user voice frequency signatures into synaptic resonance space |
+| **v6.2** | 🔬 Active Research | Live NREM/REM sleep consolidation visualizer showing synaptic weight fluctuation graphs |
+| **v6.3** | 📋 Planned | DVS event retina front-end integration for biological vision and spatial depth perception |
+| **v7.0** | 🌌 Long-term Vision | Full autonomous conscious flow state running natively on sub-watt neuromorphic silicon |
 
 ---
 
-## 📁 Proje Dizin Ağacı
+## 📁 Project Directory Tree
 
 ```
 Dona_Aeon/
-├── NEUROMORPHIC_MANIFESTO.md      # Kalıcı bağlayıcı nöromorfik anayasa
-├── README.md                      # Bu vitrin ve mimari dokümantasyonu (v6.0)
-├── start_local.bat                # Yerel üretim başlatıcı (tek tık)
+├── NEUROMORPHIC_MANIFESTO.md      # Binding neuromorphic doctrine
+├── README.md                      # Public documentation & architecture showcase
+├── start_local.bat                # One-click local production launcher
 ├── core/
-│   ├── dona_agent.py              # AeonBiologicalOrchestrator (biyolojik organizma)
-│   ├── dona_web_server.py         # FastAPI Nöromorfik Web API & Telemetri
-│   ├── snn_phoneme_autoencoder.py # motor_dim=512 · num_steps=12 · seyrek ateşleme
-│   ├── dona_synapse_codec.py      # COO seyrek sinaptik ağırlık codec'i
-│   ├── dona_paths.py              # Sistem yolu ve bellek eşleme yöneticisi
-│   ├── dona_predictive_brain.py   # Hiyerarşik neokorteks (L1/L2/L3 + Karl Friston FEP)
-│   ├── consolidation_manager.py   # NREM/REM uyku ve bellek konsolidasyonu
-│   ├── episodic_memory_capsule.py # 3-Kademeli Episodik Hafıza Sarayı
-│   ├── neuromodulator_pool.py     # 5 Faktörlü nöromodülatör havuzu (DA, NE, 5-HT, ACh, OXT)
-│   ├── conductance_neuron.py      # AdEx kondüktans E/I denge ağı
-│   ├── thalamic_relay.py          # Talamik çift-kanal TRN kapılama
-│   └── dona_physiology.py         # ATP / Laktat / metabolizma döngüsü
+│   ├── dona_agent.py              # AeonBiologicalOrchestrator (biological organism)
+│   ├── dona_web_server.py         # FastAPI Neuromorphic Web API & Telemetry
+│   ├── snn_phoneme_autoencoder.py # motor_dim=512 · num_steps=12 · sparse firing
+│   ├── dona_synapse_codec.py      # COO sparse synaptic weight codec
+│   ├── dona_paths.py              # System paths and memory mapper
+│   ├── dona_predictive_brain.py   # Hierarchical neocortex (L1/L2/L3 + Karl Friston FEP)
+│   ├── consolidation_manager.py   # NREM/REM sleep memory consolidation
+│   ├── episodic_memory_capsule.py # 3-Tier Episodic Memory Palace
+│   ├── neuromodulator_pool.py     # 5-Factor pool (DA, NE, 5-HT, ACh, OXT)
+│   ├── conductance_neuron.py      # AdEx conductance E/I balance network
+│   ├── thalamic_relay.py          # Thalamic dual-channel TRN gating
+│   └── dona_physiology.py         # ATP / Lactate / metabolic homeostatic cycle
 ├── modules/
-│   ├── dona_memory_palace.py      # Topolojik bilgi grafı sarayı
+│   ├── dona_memory_palace.py      # Topological knowledge graph palace
 │   ├── dona_vocal_motor.py        # Two-Mass Glottal + Kelly-Lochbaum + Pedalboard DSP
-│   ├── neural_cochlea.py          # 128-Kanallı Gammatone Biyo-Koklea
-│   ├── kelly_lochbaum_tract.py    # 16 Kesitli akustik vokal tüp modeli
-│   ├── two_mass_glottal_model.py  # Glottal osilatör diferansiyel fiziği
-│   └── biometric_vocal_analyzer.py# Ses frekansı kimlik doğrulayıcı & ayna nöron
+│   ├── neural_cochlea.py          # 128-Channel Gammatone Bio-Cochlea
+│   ├── kelly_lochbaum_tract.py    # 16-Section acoustic tube vocal tract
+│   ├── two_mass_glottal_model.py  # Glottal oscillator fluid dynamics
+│   └── biometric_vocal_analyzer.py# Voice frequency speaker ID & mirror neuron
 ├── scripts/
-│   ├── imprint_genomic_brain.py   # O(1) analitik sinaptik genom imprinting
-│   ├── web_transducer_bridge.py   # Canlı web metin → koklear spike → hafıza düğümü
-│   └── test_all_phases.py         # Tüm 10 biyolojik mimari test protokolü
+│   ├── imprint_genomic_brain.py   # O(1) analytic genomic synaptic imprinting
+│   ├── web_transducer_bridge.py   # Live web text → cochlear spike → memory node
+│   └── test_all_phases.py         # 10-Tier biological validation suite
 ├── memory/
-│   ├── synapses_core.pt           # COO seyrek sinaptik matris
-│   ├── decoder_state.pt           # Broca motor korteks ağırlıkları
-│   ├── episodic_palace.json       # Kalıcı episodik hafıza kapsülleri
-│   ├── transducer_nodes.json      # Mühürlenmiş topolojik bilgi grafı
-│   └── vocal_models/              # Yerel nöral ses ve tını profilleri
+│   ├── synapses_core.pt           # COO sparse synaptic weight tensor
+│   ├── decoder_state.pt           # Broca motor cortex state
+│   ├── episodic_palace.json       # Persistent episodic memory capsules
+│   ├── transducer_nodes.json      # Sealed topological knowledge graph
+│   └── vocal_models/              # Local acoustic neural models & timbre profiles
 └── web/
-    ├── index.html                 # Kuş bakışı 3B ofis kabuğu (v18.4)
-    ├── app.js                     # Three.js r128 3B ofis & diegetik motor (v18.4)
-    ├── style.css                  # Diegetik, sınırsız stüdyo HUD stili
-    └── three.min.js               # Çevrimdışı yerel Three.js kütüphanesi
+    ├── index.html                 # 3D studio office HUD shell (v18.4)
+    ├── app.js                     # Three.js r128 3D engine & diegetic scene (v18.4)
+    ├── style.css                  # Diegetic borderless HUD design system
+    └── three.min.js               # Local Three.js r128 library
 ```
 
 ---
 
-## 📜 Lisans ve Telif Hakları
+## 📜 Attribution and License
 
 ```
 DONA ÆON — Autonomous Neuromorphic Digital Mind (NDM v6.0)
-Telif Hakkı © 2026 Dona Codex. Tüm Hakları Saklıdır.
+Copyright © 2026 Dona Codex. All Rights Reserved.
 
-Bu proje bağımsız hesaplamalı nörobilim, biyomimetik yapay zekâ ve
-bilişsel mimari araştırmaları kapsamında geliştirilmiştir.
-Atıfta bulunulmaksızın ticari amaçla kopyalanamaz veya dağıtılamaz.
+This project is developed as an open scientific inquiry into computational
+neuroscience, biomimetic artificial intelligence, and cognitive architectures.
+Commercial distribution without attribution is prohibited.
 
-Kullanılan Açık Kaynak Kütüphaneler ve Temeller:
+Open Source Foundations & Components:
   · PyTorch (BSD-3-Clause)
   · Spotify Pedalboard C++ DSP (GPL-3.0)
   · NumPy / SciPy (BSD)
@@ -364,6 +364,6 @@ Kullanılan Açık Kaynak Kütüphaneler ve Temeller:
 
 <div align="center">
   <b>DONA CODEX</b> · <i>Computationally Embodied Neuromorphic Digital Mind</i><br/>
-  <sub>Sıfır Bulut LLM · %100 Biyolojik İlkeler · Özgün Hesaplamalı Nörobilim</sub><br/>
-  <sub>⚡ 2048 LIF Neokorteks · 🦻 128-Kanal Biyo-Koklea · 🏰 Episodik Hafıza Sarayı · 🎙️ İki-Kütle Glottal Fizik · 🎛️ Spotify Pedalboard</sub>
+  <sub>Zero Cloud LLM · 100% Biological Principles · Authentic Computational Neuroscience</sub><br/>
+  <sub>⚡ 2,048 LIF Neocortex · 🦻 128-Channel Bio-Cochlea · 🏰 Episodic Memory Palace · 🎙️ Two-Mass Glottal · 🎛️ Spotify Pedalboard</sub>
 </div>
