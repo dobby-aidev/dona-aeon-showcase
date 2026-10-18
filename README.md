@@ -222,31 +222,7 @@ The studio wall features an integrated **4K Research Station** free of cliché n
 - **Hardware:** Standard CPU (No discrete GPU required), 2 GB RAM
 - **Browser:** Any modern browser with WebGL 2.0 and Web Audio API support
 
-### 2. Install Dependencies
-```bash
-git clone https://github.com/dobby-aidev/Dona_Aeon.git
-cd Dona_Aeon
-pip install torch numpy scipy pedalboard fastapi uvicorn piper-tts
-```
-
-### 3. Imprint Genomic Brain Synapses (One-time, ~2.5 s, O(1))
-```bash
-python scripts/imprint_genomic_brain.py
-```
-
-### 4. Launch the Local Mind Server
-```bash
-# Windows Quick Launch:
-start_local.bat
-
-# Or via Command Line:
-python -m uvicorn core.dona_web_server:app --host 127.0.0.1 --port 7860
-```
-
-Open your browser:
-👉 **http://127.0.0.1:7860**
-
-### 5. Trigger Autonomous Web Learning (Optional)
+###  2.Trigger Autonomous Web Learning (Optional)
 ```bash
 # Research and seal concepts from Wikipedia:
 python scripts/web_transducer_bridge.py --url https://tr.wikipedia.org/wiki/Sinir_h%C3%BCcresi
